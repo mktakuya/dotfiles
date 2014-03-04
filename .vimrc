@@ -94,10 +94,10 @@ autocmd FileType jinja setl nocindent expandtab tabstop=8 softtabstop=2 shiftwid
 " 外部ファイル
 " --------------------
 " neobundle
-source $HOME/dev/mktakuya/dotfiles/.vimrc.neobundle
+source $HOME/dotfiles/.vimrc.neobundle
 
 " neocomplcache
-source $HOME/dev/mktakuya/dotfiles/.vimrc.neocomplcache
+source $HOME/dotfiles/.vimrc.neocomplcache
 
 " --------------------
 " プラグインの設定

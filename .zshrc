@@ -109,7 +109,7 @@ esac
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
 ### Aliases ###
-alias ls="ls --color"
+alias ls="ls -G"
 alias v=vim
 alias g=git
 
@@ -133,3 +133,11 @@ setopt nonomatch
 
 ### http://d.hatena.ne.jp/ksnt/20110308 Pythonの対話シェルの補完
 export PYTHONSTARTUP=~/.pythonstartup
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+### PostgreSQL関連
+# http://qiita.com/tstomoki/items/0f1a930bd42a8e1fdaac
+export PGDATA=/usr/local/var/postgres
+

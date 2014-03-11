@@ -109,7 +109,15 @@ esac
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
 ### Aliases ###
-alias ls="ls -G"
+case ${OSTYPE} in
+    darwin*)
+        alias ls="ls -G"
+        ;;
+    linux*)
+        alias ls="ls --color"
+        ;;
+esac
+
 alias v=vim
 alias g=git
 

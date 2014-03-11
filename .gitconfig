@@ -2,3 +2,13 @@
 	name = mktakuya
     email = takuya.mk96@gmail.com
 
+[alias]
+    st = status -sb
+    df = diff
+    co = checkout
+    b = branch
+
+[color]
+    ui = true
+    diff = true
+

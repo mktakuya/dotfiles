@@ -152,3 +152,11 @@ export PGDATA=/usr/local/var/postgres
 # mosh
 compdef mosh=ssh
 
+# MacVim関連
+case ${OSTYPE} in darwin*)
+    if [ -f /Applications/MacVim.app/Contents/MacOS/Vim ]; then
+        alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+        alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+    fi
+esac
+

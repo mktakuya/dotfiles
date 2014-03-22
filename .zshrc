@@ -160,3 +160,5 @@ case ${OSTYPE} in darwin*)
     fi
 esac
 
+# MacのPATH
+export PATH=$PATH:/usr/local/bin

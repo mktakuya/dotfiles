@@ -67,6 +67,9 @@ NeoBundle 'sudar/vim-arduino-syntax'
 "" LaTeX
 NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 
+"" カラースキーム
+NeoBundle 'w0ng/vim-hybrid'
+
 filetype plugin indent on     " required!
 filetype indent on
 syntax on

@@ -161,4 +161,7 @@ case ${OSTYPE} in darwin*)
 esac
 
 # MacのPATH
-export PATH=$PATH:/usr/local/bin
+case ${OSTYPE} in darwin*)
+    export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+esac
+

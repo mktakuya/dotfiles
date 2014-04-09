@@ -105,6 +105,13 @@ esac
 # ------------------------------
 # Other Settings
 # ------------------------------
+
+### Virtualenvwrapper ###
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    export WORKON_HOME=$HOME/.virtualenvs
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+
 ### RVM ###
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 

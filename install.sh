@@ -8,3 +8,5 @@ do
     fi
 done
 
+mkdir ~/.vimbackup
+

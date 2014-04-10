@@ -57,7 +57,7 @@ NeoBundle 'jiangmiao/simple-javascript-indenter'
 NeoBundle 'StanAngeloff/php.vim'
 
 "" Python
-"NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'davidhalter/jedi-vim'
 """ Django関連
 NeoBundle 'lambdalisue/vim-django-support'
 

@@ -166,3 +166,8 @@ case ${OSTYPE} in darwin*)
     fi
 esac
 
+### Java関連 ###
+case ${OSTYPE} in darwin*)
+    export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+esac
+

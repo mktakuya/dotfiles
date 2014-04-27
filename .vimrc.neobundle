@@ -57,7 +57,9 @@ NeoBundle 'jiangmiao/simple-javascript-indenter'
 NeoBundle 'StanAngeloff/php.vim'
 
 "" Python
+autocmd FileType python let b:did_ftplugin = 1
 NeoBundle 'davidhalter/jedi-vim'
+
 """ Django関連
 NeoBundle 'lambdalisue/vim-django-support'
 

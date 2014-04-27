@@ -1,14 +1,15 @@
-# -*- coding:utf-8 -*-
-# Pythonスタートアップ
+# -*- encoding: utf-8 -*-
+# Python Startup Script
 import readline
 import rlcompleter
 import atexit
 import os
-
-# タブ補完
-readline.parse_and_bind('tab: complete')
-
-# ヒストリーファイル
+# タブ補完の有効化
+if 'libedit' in readline.__doc__:
+    readline.parse_and_bind("bind ^I rl_complete")
+else:
+    readline.parse_and_bind("tab: complete")
+# ヒストリーの表示
 histfile = os.path.join(os.environ['HOME'], '.pythonhistory')
 try:
     readline.read_history_file(histfile)

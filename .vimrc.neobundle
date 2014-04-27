@@ -60,6 +60,10 @@ NeoBundle 'StanAngeloff/php.vim'
 autocmd FileType python let b:did_ftplugin = 1
 NeoBundle 'davidhalter/jedi-vim'
 
+"" Ruby
+NeoBundle 'vim-ruby'
+NeoBundle 'vim-rails'
+
 """ Django関連
 NeoBundle 'lambdalisue/vim-django-support'
 

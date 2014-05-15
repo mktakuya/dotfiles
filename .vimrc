@@ -113,7 +113,8 @@ autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,exc
 autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " Ruby
-set tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType ruby setl autoindent smartindent
+autocmd FileType ruby setl tabstop=2 shiftwidth=2 softtabstop=2
 
 " Jinja
 autocmd FileType jinja setl nocindent expandtab tabstop=8 softtabstop=2 shiftwidth=2

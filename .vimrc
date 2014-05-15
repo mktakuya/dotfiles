@@ -122,7 +122,7 @@ autocmd FileType jinja setl nocindent expandtab tabstop=8 softtabstop=2 shiftwid
 " indent guides
 "------------------------------------
 hi IndentGuidesOdd  ctermbg=white
-hi IndentGuidesEven ctermbg=lightgrey
+hi IndentGuidesEven ctermbg=white
 let g:indent_guides_guide_size = 1
 let g:indent_guides_enable_on_vim_startup = 1
 

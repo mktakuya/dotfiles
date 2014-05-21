@@ -16,24 +16,16 @@ au BufWritePost * mkview
 autocmd BufReadPost * loadview
 
 " 保存時に行末の空白を除去する
-autocmd BufWritePre * :%s/\s\+$//ge
+"autocmd BufWritePre * :%s/\s\+$//ge
 " 全角スペースを視覚化
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
-set autoread
-set hidden
-set noswapfile
-set nobackup
-filetype on
-filetype plugin on
-filetype indent on
 
 "" ステータスライン
 " ステータスラインに文字コード/改行文字種別を表示
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 " 常にステータス行を表示
 set laststatus=2
-
 
 " バックアップ関連
 set backup
@@ -47,15 +39,6 @@ set updatetime=180000
 
 " Backspace関連
 set backspace=start,eol,indent
-
-" インデント関連
-set expandtab
-set autoindent
-set smartindent
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
-set smarttab
 
 " クリップボード関連の設定
 set clipboard=autoselect
@@ -95,6 +78,9 @@ augroup END
 " --------------------
 " 言語別設定
 " --------------------
+" 共通
+set autoindent smartindent expandtab tabstop=4 softtabstop=4 shiftwidth=4
+
 " HTML
 autocmd FileType html setlocal nocindent expandtab tabstop=8 softtabstop=2 shiftwidth=2
 
@@ -113,8 +99,8 @@ autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,exc
 autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " Ruby
-autocmd FileType ruby setl autoindent smartindent
-autocmd FileType ruby setl tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType ruby setl nocindent autoindent smartindent
+autocmd FileType ruby setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
 " Jinja
 autocmd FileType jinja setl nocindent expandtab tabstop=8 softtabstop=2 shiftwidth=2
@@ -166,4 +152,4 @@ if exists('&ambiwidth')
 endif
 
 syntax on
-
+filetype plugin indent on

@@ -25,7 +25,7 @@ NeoBundle "altercation/solarized"
 
 " Ruby / Rails
 "NeoBundle 'alpaca_tags'
-NeoBundle 'rubocop'
+"NeoBundle 'rubocop'
 "NeoBundle 'vim-rails'
 NeoBundle 'rails.vim'
 NeoBundle 'vim-endwise'
@@ -73,3 +73,8 @@ NeoBundle 'vimtaku/hl_matchit.vim.git' " http://d.hatena.ne.jp/vimtaku/20121226/
 NeoBundle 'Vim-Jinja2-Syntax'
 
 NeoBundle 'TwitVim'
+
+"" Markdown
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'

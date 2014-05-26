@@ -105,6 +105,9 @@ autocmd FileType ruby setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
 " Jinja
 autocmd FileType jinja setl nocindent expandtab tabstop=8 softtabstop=2 shiftwidth=2
 
+" Markdown
+autocmd FileType markdown setl nocindent
+
 "------------------------------------
 " indent guides
 "------------------------------------
@@ -150,6 +153,9 @@ set fileformats=unix,dos,mac
 if exists('&ambiwidth')
   set ambiwidth=double
 endif
+
+" .md をMarkdownとして扱う
+au BufRead,BufNewFile *.md set filetype=markdown
 
 syntax on
 filetype plugin indent on

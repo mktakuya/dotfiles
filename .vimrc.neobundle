@@ -38,6 +38,17 @@ NeoBundle 'The-NERD-tree'
 NeoBundle 'The-NERD-Commenter'
 NeoBundle 'taglist.vim'
 
+" Python / Django
+NeoBundle 'django.vim'
+NeoBundle 'lambdalisue/vim-django-support', {
+    \ "autoload": {
+    \   "filetypes": ["python", "python3", "djangohtml"]
+    \ }}
+
+" Jinja2
+NeoBundle 'lepture/vim-jinja'
+NeoBundle 'Vim-Jinja2-Syntax'
+
 NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'git@github.com:nathanaelkane/vim-indent-guides.git'
 NeoBundle 'git@github.com:mattn/benchvimrc-vim.git'
@@ -70,7 +81,6 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'hokaccha/vim-html5validator'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vimtaku/hl_matchit.vim.git' " http://d.hatena.ne.jp/vimtaku/20121226/1356500063
-NeoBundle 'Vim-Jinja2-Syntax'
 
 NeoBundle 'TwitVim'
 
@@ -78,3 +88,6 @@ NeoBundle 'TwitVim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
+
+" YAML
+NeoBundle 'yaml-vim'

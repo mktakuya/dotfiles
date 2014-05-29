@@ -41,9 +41,7 @@ set updatetime=180000
 set backspace=start,eol,indent
 
 " クリップボード関連の設定
-set clipboard=autoselect
-set clipboard+=unnamed
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " 見た目の設定
 set syntax=on

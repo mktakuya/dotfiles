@@ -16,7 +16,7 @@ au BufWritePost * mkview
 autocmd BufReadPost * loadview
 
 " 保存時に行末の空白を除去する
-"autocmd BufWritePre * :%s/\s\+$//ge
+autocmd BufWritePre * :%s/\s\+$//ge
 " 全角スペースを視覚化
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/

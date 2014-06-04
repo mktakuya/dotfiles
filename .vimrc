@@ -100,6 +100,10 @@ autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 autocmd FileType ruby setl nocindent autoindent smartindent
 autocmd FileType ruby setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
+" slim
+autocmd FileType slim setl nocindent autoindent smartindent
+autocmd FileType slim setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
+
 " Jinja
 autocmd FileType jinja setl nocindent expandtab tabstop=8 softtabstop=2 shiftwidth=2
 

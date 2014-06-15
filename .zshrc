@@ -126,6 +126,7 @@ esac
 
 alias v=vim
 alias g=git
+alias sl=ls
 
 # cdコマンド実行後、lsを実行する
 function cd() {

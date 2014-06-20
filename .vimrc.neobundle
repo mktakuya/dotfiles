@@ -24,16 +24,15 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle "altercation/solarized"
 
 " Ruby / Rails
-"NeoBundle 'alpaca_tags'
-"NeoBundle 'rubocop'
-"NeoBundle 'vim-rails'
+NeoBundle 'git@github.com:alpaca-tc/alpaca_tags.git'
+NeoBundle 'git@github.com:bbatsov/rubocop.git'
+NeoBundle 'git@github.com:tpope/vim-rails.git'
 NeoBundle 'rails.vim'
-NeoBundle 'vim-endwise'
+NeoBundle 'git@github.com:tpope/vim-endwise.git'
 NeoBundle 'ruby-matchit'
 NeoBundle 'basyura/unite-rails'
 NeoBundle 'ujihisa/unite-gem'
 NeoBundle 'vim-ruby/vim-ruby'
-"NeoBundle 'git@github.com:todesking/ruby_hl_lvar.vim.git'
 NeoBundle 'The-NERD-tree'
 NeoBundle 'The-NERD-Commenter'
 NeoBundle 'taglist.vim'
@@ -47,7 +46,7 @@ NeoBundle 'lambdalisue/vim-django-support', {
 
 " Jinja2
 NeoBundle 'lepture/vim-jinja'
-NeoBundle 'Vim-Jinja2-Syntax'
+NeoBundle 'git@github.com:Glench/Vim-Jinja2-Syntax.git'
 
 NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
@@ -90,4 +89,4 @@ NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 
 " YAML
-NeoBundle 'yaml-vim'
+NeoBundle 'git@github.com:ingydotnet/yaml-vim.git'

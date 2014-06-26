@@ -21,7 +21,7 @@ NeoBundle 'Shougo/vimproc', {
   \ },
 \ }
 
-NeoBundle "altercation/solarized"
+NeoBundle 'altercation/vim-colors-solarized'
 
 " Ruby / Rails
 NeoBundle 'git@github.com:alpaca-tc/alpaca_tags.git'

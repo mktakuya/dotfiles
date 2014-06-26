@@ -45,6 +45,8 @@ set clipboard=unnamed
 
 " 見た目の設定
 set syntax=on
+set background=dark
+colorscheme solarized
 set number
 set ruler
 set showmatch

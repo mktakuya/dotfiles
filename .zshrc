@@ -172,3 +172,9 @@ case ${OSTYPE} in darwin*)
     export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 esac
 
+### zsh-completions ###
+case ${OSTYPE} in darwin*)
+    if [ -e /usr/local/share/zsh-completions ]; then
+        fpath=(/usr/local/share/zsh-completions $fpath)
+    fi
+esac

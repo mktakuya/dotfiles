@@ -178,3 +178,6 @@ case ${OSTYPE} in darwin*)
         fpath=(/usr/local/share/zsh-completions $fpath)
     fi
 esac
+
+### cabal ###
+export PATH=${HOME}/.cabal/bin:$PATH

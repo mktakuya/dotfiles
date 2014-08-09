@@ -16,7 +16,7 @@ au BufWritePost * mkview
 autocmd BufReadPost * loadview
 
 " 保存時に行末の空白を除去する
-autocmd BufWritePre * :%s/\s\+$//ge
+"autocmd BufWritePre * :%s/\s\+$//ge
 " 全角スペースを視覚化
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
@@ -99,6 +99,10 @@ autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 " Ruby
 autocmd FileType ruby setl nocindent autoindent smartindent
 autocmd FileType ruby setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
+
+" erb
+autocmd FileType eruby setl nocindent autoindent smartindent
+autocmd FileType eruby setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
 " slim
 autocmd FileType slim setl nocindent autoindent smartindent

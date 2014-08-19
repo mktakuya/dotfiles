@@ -47,7 +47,6 @@ NeoBundle 'lepture/vim-jinja'
 NeoBundle 'git@github.com:Glench/Vim-Jinja2-Syntax.git'
 
 NeoBundle 'vim-scripts/dbext.vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'mattn/benchvimrc-vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'

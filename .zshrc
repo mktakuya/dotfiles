@@ -181,3 +181,9 @@ esac
 
 ### cabal ###
 export PATH=${HOME}/.cabal/bin:$PATH
+
+### git の補完 ###
+fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+
+autoload -U compinit
+compinit -u

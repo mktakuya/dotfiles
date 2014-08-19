@@ -125,6 +125,7 @@ case ${OSTYPE} in
 esac
 
 alias v=vim
+alias rv='r vim'
 alias g=git
 alias sl=ls
 

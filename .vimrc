@@ -16,7 +16,7 @@ au BufWritePost * mkview
 autocmd BufReadPost * loadview
 
 " 保存時に行末の空白を除去する
-"autocmd BufWritePre * :%s/\s\+$//ge
+autocmd BufWritePre * :%s/\s\+$//ge
 " 全角スペースを視覚化
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
@@ -113,6 +113,10 @@ autocmd FileType jinja setl nocindent expandtab tabstop=8 softtabstop=2 shiftwid
 
 " Markdown
 autocmd FileType markdown setl nocindent
+
+" YAML
+autocmd FileType yaml setl nocindent autoindent smartindent
+autocmd FileType yaml setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
 "------------------------------------
 " indent guides

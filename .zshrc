@@ -168,6 +168,11 @@ case ${OSTYPE} in darwin*)
     fi
 esac
 
+case ${OSTYPE} in darwin*)
+    export WORKON_HOME=$HOME/.virtualenvs
+    source /usr/local/bin/virtualenvwrapper.sh
+esac
+
 ### Java関連 ###
 case ${OSTYPE} in darwin*)
     export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
@@ -185,6 +190,11 @@ export PATH=${HOME}/.cabal/bin:$PATH
 
 ### git の補完 ###
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+
+### Swift ###
+case ${OSTYPE} in darwin*)
+    export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH
+esac
 
 autoload -U compinit
 compinit -u

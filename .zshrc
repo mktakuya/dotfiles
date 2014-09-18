@@ -196,5 +196,9 @@ case ${OSTYPE} in darwin*)
     export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH
 esac
 
+### pyenv ###
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
 autoload -U compinit
 compinit -u

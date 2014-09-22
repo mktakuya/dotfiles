@@ -200,5 +200,12 @@ esac
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
+### Golang ###
+if [ -x "`which go`" ]; then
+    export GOROOT=`go env GOROOT`
+    export GOPATH=$HOME/code/go-local
+    export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+fi
+
 autoload -U compinit
 compinit -u

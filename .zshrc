@@ -148,7 +148,7 @@ export PATH="/opt/processing-2.1:$PATH"
 setopt nonomatch
 
 ### http://d.hatena.ne.jp/ksnt/20110308 Pythonの対話シェルの補完
-export PYTHONSTARTUP=~/.pythonstartup
+export PYTHONSTARTUP="$HOME/.pythonstartup"
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
@@ -207,6 +207,11 @@ if [ -x "`which go`" ]; then
     export GOPATH=$HOME/code/go-local
     export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 fi
+
+
+case ${OSTYPE} in darwin*)
+    alias gcc=/usr/local/bin/gcc-4.9
+esac
 
 autoload -U compinit
 compinit -u

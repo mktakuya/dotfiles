@@ -208,10 +208,5 @@ if [ -x "`which go`" ]; then
     export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 fi
 
-
-case ${OSTYPE} in darwin*)
-    alias gcc=/usr/local/bin/gcc-4.9
-esac
-
 autoload -U compinit
 compinit -u

@@ -128,6 +128,7 @@ alias v=vim
 alias rv='r vim'
 alias g=git
 alias sl=ls
+alias be='bundle exec'
 
 # cdコマンド実行後、lsを実行する
 function cd() {

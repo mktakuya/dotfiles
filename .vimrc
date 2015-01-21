@@ -114,6 +114,9 @@ autocmd FileType jinja setl nocindent expandtab tabstop=8 softtabstop=2 shiftwid
 " Markdown
 autocmd FileType markdown setl nocindent
 
+" TeX
+let g:tex_conceal=''
+
 " YAML
 autocmd FileType yaml setl nocindent autoindent smartindent
 autocmd FileType yaml setl tabstop=2 expandtab shiftwidth=2 softtabstop=2

@@ -82,5 +82,8 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 
+"" LaTeX
+NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
+
 " YAML
 NeoBundle 'git@github.com:ingydotnet/yaml-vim.git'

@@ -21,6 +21,8 @@ autocmd BufWritePre * :%s/\s\+$//ge
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
 
+set undodir=D:$HOME/.vimbackup
+
 "" ステータスライン
 " ステータスラインに文字コード/改行文字種別を表示
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P

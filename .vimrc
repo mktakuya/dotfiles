@@ -110,6 +110,9 @@ autocmd FileType eruby setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
 autocmd FileType slim setl nocindent autoindent smartindent
 autocmd FileType slim setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
+autocmd FileType scss setl nocindent autoindent smartindent
+autocmd FileType scss setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
+
 " Jinja
 autocmd FileType jinja setl nocindent expandtab tabstop=8 softtabstop=2 shiftwidth=2
 

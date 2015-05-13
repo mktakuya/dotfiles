@@ -67,6 +67,8 @@ NeoBundle 'groenewege/vim-less'
 NeoBundle 'beyondwords/vim-twig'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'rodjek/vim-puppet'
+NeoBundle 'JulesWang/css.vim'
+NeoBundle 'cakebaker/scss-syntax.vim'
 
 "" HTML/CSS
 NeoBundle 'othree/html5.vim'

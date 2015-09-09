@@ -113,6 +113,13 @@ autocmd FileType slim setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
 autocmd FileType scss setl nocindent autoindent smartindent
 autocmd FileType scss setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
+" Javascript
+autocmd filetype javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
+
+" JSON
+autocmd BufNewFile,BufRead *.json  set filetype=json
+autocmd BufNewFile,BufRead *.json  set tabstop=2 shiftwidth=2 expandtab
+
 " Coffee Script
 autocmd Filetype coffee setl nocindent autoindent smartindent
 autocmd FileType coffee setl tabstop=2 expandtab shiftwidth=2 softtabstop=2

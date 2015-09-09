@@ -91,3 +91,11 @@ NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 
 " YAML
 NeoBundle 'git@github.com:ingydotnet/yaml-vim.git'
+
+" Javascript / Node.js
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'moll/vim-node'
+NeoBundle 'teramako/jscomplete-vim'
+NeoBundle 'myhere/vim-nodejs-complete'

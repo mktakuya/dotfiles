@@ -187,6 +187,10 @@ case ${OSTYPE} in darwin*)
     export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH
 esac
 
+### coffeescriptのコンパイル ###
+alias node-coffee='coffee --compile --output js coffee && node'
+
+
 ### pyenv ###
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"

@@ -78,6 +78,7 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'hokaccha/vim-html5validator'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vimtaku/hl_matchit.vim.git' " http://d.hatena.ne.jp/vimtaku/20121226/1356500063
+NeoBundle 'gorodinskiy/vim-coloresque'
 
 NeoBundle 'TwitVim'
 

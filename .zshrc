@@ -196,6 +196,10 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+
+### nodebrew ###
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 ### Golang ###
 if [ -x "`which go`" ]; then
     export GOROOT=`go env GOROOT`

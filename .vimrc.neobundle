@@ -11,7 +11,6 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
-call neobundle#end()
 
 " vimproc
 NeoBundle 'Shougo/vimproc', {
@@ -100,3 +99,6 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'moll/vim-node'
 NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'myhere/vim-nodejs-complete'
+
+call neobundle#end()
+

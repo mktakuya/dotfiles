@@ -79,6 +79,9 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'vimtaku/hl_matchit.vim.git' " http://d.hatena.ne.jp/vimtaku/20121226/1356500063
 NeoBundle 'gorodinskiy/vim-coloresque'
 
+NeoBundle 'StanAngeloff/php.vim'
+NeoBundle 'vim-php'
+
 NeoBundle 'TwitVim'
 
 "" Markdown

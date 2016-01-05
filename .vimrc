@@ -91,7 +91,9 @@ autocmd FileType css setlocal nocindent expandtab tabstop=8 softtabstop=2 shiftw
 autocmd FileType c setlocal cindent expandtab tabstop=8 softtabstop=8 shiftwidth=8
 
 " PHP http://tech.basicinc.jp/PHP/2013/06/17/vim-php/
-autocmd FileType php,ctp :set dictionary=~/.vim/dict/php.dict
+autocmd FileType php set  dictionary=~/.vim/dict/php.dict
+autocmd FileType php setl cindent autoindent smartindent
+autocmd FileType php setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
 " Python
 autocmd FileType python setl autoindent

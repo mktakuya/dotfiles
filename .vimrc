@@ -187,6 +187,10 @@ let g:syntastic_mode_map = {
       \ 'passive_filetypes': []
       \ }
 
+" yassu/absolute_ca.vim
+nnoremap <c-a> :call absolute_ca#increment()<cr>
+nnoremap <c-x> :call absolute_ca#decrement()<cr>
+
 " neocomplcache
 "" <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"

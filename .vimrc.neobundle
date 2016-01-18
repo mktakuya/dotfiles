@@ -26,6 +26,8 @@ NeoBundle 'altercation/vim-colors-solarized'
 
 NeoBundle 'tpope/vim-fugitive'
 
+NeoBundle 'yassu/absolute_ca.vim'
+
 " Ruby / Rails
 NeoBundle 'git@github.com:alpaca-tc/alpaca_tags.git'
 NeoBundle 'git@github.com:bbatsov/rubocop.git'

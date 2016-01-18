@@ -79,41 +79,36 @@ augroup END
 " 言語別設定
 " --------------------
 " 共通
-set autoindent smartindent expandtab tabstop=4 softtabstop=4 shiftwidth=4
+set autoindent smartindent expandtab nocindent tabstop=4 softtabstop=4 shiftwidth=4
 
 " HTML
-autocmd FileType html setlocal nocindent expandtab tabstop=8 softtabstop=2 shiftwidth=2
+autocmd FileType html setlocal nocindent tabstop=2 softtabstop=2 shiftwidth=2
 
 " CSS
-autocmd FileType css setlocal nocindent expandtab tabstop=8 softtabstop=2 shiftwidth=2
+autocmd FileType css setlocal nocindent tabstop=2 softtabstop=2 shiftwidth=2
 
 " C言語
-autocmd FileType c setlocal cindent expandtab tabstop=8 softtabstop=8 shiftwidth=8
+autocmd FileType c setlocal cindent tabstop=8 softtabstop=8 shiftwidth=8
 
 " PHP http://tech.basicinc.jp/PHP/2013/06/17/vim-php/
 autocmd FileType php set  dictionary=~/.vim/dict/php.dict
-autocmd FileType php setl cindent autoindent smartindent
-autocmd FileType php setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
+autocmd FileType php setl cindent
+autocmd FileType php setl tabstop=2 shiftwidth=2 softtabstop=2
 
 " Python
-autocmd FileType python setl autoindent
-autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
+autocmd FileType python setl cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python setl tabstop=8
 
 " Ruby
-autocmd FileType ruby setl nocindent autoindent smartindent
-autocmd FileType ruby setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
+autocmd FileType ruby setl tabstop=2 shiftwidth=2 softtabstop=2
 
 " erb
-autocmd FileType eruby setl nocindent autoindent smartindent
-autocmd FileType eruby setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
+autocmd FileType eruby setl tabstop=2 shiftwidth=2 softtabstop=2
 
 " slim
-autocmd FileType slim setl nocindent autoindent smartindent
-autocmd FileType slim setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
+autocmd FileType slim setl tabstop=2 shiftwidth=2 softtabstop=2
 
-autocmd FileType scss setl nocindent autoindent smartindent
-autocmd FileType scss setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
+autocmd FileType scss setl tabstop=2 shiftwidth=2 softtabstop=2
 
 " Javascript
 autocmd filetype javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
@@ -123,21 +118,18 @@ autocmd BufNewFile,BufRead *.json  set filetype=json
 autocmd BufNewFile,BufRead *.json  set tabstop=2 shiftwidth=2 expandtab
 
 " Coffee Script
-autocmd Filetype coffee setl nocindent autoindent smartindent
-autocmd FileType coffee setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
+autocmd FileType coffee setl tabstop=2 shiftwidth=2 softtabstop=2
 
 " Jinja
-autocmd FileType jinja setl nocindent expandtab tabstop=8 softtabstop=2 shiftwidth=2
+autocmd FileType jinja setl tabstop=8 softtabstop=2 shiftwidth=2
 
 " Markdown
-autocmd FileType markdown setl nocindent
 
 " TeX
 let g:tex_conceal=''
 
 " YAML
-autocmd FileType yaml setl nocindent autoindent smartindent
-autocmd FileType yaml setl tabstop=2 expandtab shiftwidth=2 softtabstop=2
+autocmd FileType yaml setl tabstop=2 shiftwidth=2 softtabstop=2
 
 "------------------------------------
 " indent guides

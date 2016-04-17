@@ -129,7 +129,7 @@ autocmd FileType jinja setl tabstop=8 softtabstop=2 shiftwidth=2
 let g:tex_conceal=''
 
 " YAML
-autocmd FileType yaml setl tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType yaml,yml setl tabstop=2 shiftwidth=2 softtabstop=2
 
 "------------------------------------
 " indent guides

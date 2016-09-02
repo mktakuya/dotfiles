@@ -27,11 +27,11 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tpope/vim-fugitive'
 
 " Ruby / Rails
-NeoBundle 'git@github.com:alpaca-tc/alpaca_tags.git'
-NeoBundle 'git@github.com:bbatsov/rubocop.git'
-NeoBundle 'git@github.com:tpope/vim-rails.git'
+NeoBundle 'alpaca-tc/alpaca_tags'
+NeoBundle 'bbatsov/rubocop'
+NeoBundle 'tpope/vim-rails'
 NeoBundle 'rails.vim'
-NeoBundle 'git@github.com:tpope/vim-endwise.git'
+NeoBundle 'tpope/vim-endwise'
 NeoBundle 'ruby-matchit'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'The-NERD-tree'
@@ -47,7 +47,7 @@ NeoBundle 'lambdalisue/vim-django-support', {
 
 " Jinja2
 NeoBundle 'lepture/vim-jinja'
-NeoBundle 'git@github.com:Glench/Vim-Jinja2-Syntax.git'
+NeoBundle 'Glench/Vim-Jinja2-Syntax'
 
 NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'mattn/benchvimrc-vim'
@@ -76,7 +76,7 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'hokaccha/vim-html5validator'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'vimtaku/hl_matchit.vim.git' " http://d.hatena.ne.jp/vimtaku/20121226/1356500063
+NeoBundle 'vimtaku/hl_matchit.vim' " http://d.hatena.ne.jp/vimtaku/20121226/1356500063
 NeoBundle 'gorodinskiy/vim-coloresque'
 
 NeoBundle 'StanAngeloff/php.vim'
@@ -93,7 +93,7 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 
 " YAML
-NeoBundle 'git@github.com:ingydotnet/yaml-vim.git'
+NeoBundle 'ingydotnet/yaml-vim'
 
 " Javascript / Node.js
 NeoBundle 'pangloss/vim-javascript'

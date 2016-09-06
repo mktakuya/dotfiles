@@ -103,5 +103,8 @@ NeoBundle 'moll/vim-node'
 NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'myhere/vim-nodejs-complete'
 
+" Golang
+NeoBundle 'fatih/vim-go'
+
 call neobundle#end()
 

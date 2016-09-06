@@ -206,11 +206,11 @@ eval "$(pyenv init -)"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 ### Golang ###
-if [ -x "`which go`" ]; then
-    export GOROOT=`go env GOROOT`
-    export GOPATH=$HOME/code/go-local
-    export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-fi
+case ${OSTYPE} in darwin*)
+	export GOROOT=`go env GOROOT`
+	export PATH="/usr/local/go/bin:$PATH"
+	export GOPATH="$HOME/.go"
+esac
 
 autoload -U compinit
 compinit -u

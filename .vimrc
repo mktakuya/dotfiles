@@ -154,6 +154,9 @@ source ~/dotfiles/.vimrc.neobundle
 "------------------------------------
 " プラグイン設定
 "------------------------------------
+" vim-quickrun
+let g:quickrun_config = {'*': {'hook/time/enable': '1'},}
+
 
 " vim-nodejs-complete
 setl omnifunc=jscomplete#CompleteJS

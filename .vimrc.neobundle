@@ -22,6 +22,8 @@ NeoBundle 'Shougo/vimproc', {
   \ },
 \ }
 
+NeoBundle 'thinca/vim-quickrun'
+
 NeoBundle 'altercation/vim-colors-solarized'
 
 NeoBundle 'tpope/vim-fugitive'

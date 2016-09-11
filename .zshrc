@@ -207,9 +207,10 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 ### Golang ###
 case ${OSTYPE} in darwin*)
-	export PATH="/usr/local/go/bin:$PATH"
-	export GOROOT=`go env GOROOT`
-	export GOPATH="$HOME/dev/go"
+    export PATH="/usr/local/go/bin:$PATH"
+    export GOROOT=`go env GOROOT`
+    export GOPATH="$HOME/dev"
+    export PATH="$PATH:$GOPATH/bin"
 esac
 
 autoload -U compinit

@@ -204,6 +204,9 @@ if exists('&ambiwidth')
   set ambiwidth=double
 endif
 
+" vim-go
+let g:go_fmt_command = "goimports"
+
 " .md をMarkdownとして扱う
 au BufRead,BufNewFile *.md set filetype=markdown
 

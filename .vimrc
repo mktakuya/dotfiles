@@ -16,7 +16,15 @@ au BufWritePost * mkview
 autocmd BufReadPost * loadview
 
 " 保存時に行末の空白を除去する
-autocmd BufWritePre * :%s/\s\+$//ge
+fun! StripTrailingWhitespace()
+    " don't strip on these filetypes
+    if &ft =~ 'modula2\|markdown'
+        return
+    endif
+    %s/\s\+$//e
+endfun
+autocmd BufWritePre * call StripTrailingWhitespace()
+
 " 全角スペースを視覚化
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/

@@ -108,5 +108,8 @@ NeoBundle 'myhere/vim-nodejs-complete'
 " Golang
 NeoBundle 'fatih/vim-go'
 
+" Processing
+NeoBundle 'sophacles/vim-processing'
+
 call neobundle#end()
 

@@ -238,7 +238,7 @@ alias dockerip="docker ps -q | xargs docker inspect --format='{{.NetworkSettings
 alias dm='docker-machine'
 
 # http://qiita.com/shiraco/items/8971e38cbbd42ea32d73
-alias nswitch="source ~/.switch_proxy"
+alias nswitch="source ~/.switch_proxy.zsh"
 nswitch
 
 autoload -U compinit

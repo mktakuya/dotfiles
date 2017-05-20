@@ -206,6 +206,7 @@ eval "$(pyenv init -)"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 ### Golang ###
+alias gore="gore -autoimport"
 case ${OSTYPE} in darwin*)
     export PATH="/usr/local/go/bin:$PATH"
     export GOROOT=`go env GOROOT`

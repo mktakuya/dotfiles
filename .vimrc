@@ -108,7 +108,7 @@ autocmd FileType python setl cinwords=if,elif,else,for,while,try,except,finally,
 autocmd FileType python setl tabstop=8
 
 " Ruby
-autocmd FileType ruby setl tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType ruby setl tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 " erb
 autocmd FileType eruby setl tabstop=2 shiftwidth=2 softtabstop=2

@@ -242,5 +242,9 @@ alias dm='docker-machine'
 alias nswitch="source ~/.switch_proxy.zsh"
 nswitch
 
+# added by travis gem
+[ -f /Users/mktakuya/.travis/travis.sh ] && source /Users/mktakuya/.travis/travis.sh
+
 autoload -U compinit
 compinit -u
+

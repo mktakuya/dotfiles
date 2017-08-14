@@ -245,6 +245,9 @@ nswitch
 # added by travis gem
 [ -f /Users/mktakuya/.travis/travis.sh ] && source /Users/mktakuya/.travis/travis.sh
 
+# for golang glide
+export GO15VENDOREXPERIMENT=1
+
 autoload -U compinit
 compinit -u
 

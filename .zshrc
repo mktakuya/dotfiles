@@ -229,15 +229,6 @@ function peco-src() {
 }
 zle -N peco-src
 
-### docker ###
-eval "$(docker-machine env default)"
-DOCKER_IP=`docker-machine ip default`
-# mac 再起動とかのたびに必要なので alias
-alias adddockerroute="sudo route add -net 172.17.0.0/16 $DOCKER_IP"
-alias dockerip="docker ps -q | xargs docker inspect --format='{{.NetworkSettings.IPAddress}} -- {{.Name}}'"
-# docker-machine って打つのめんどいので alias
-alias dm='docker-machine'
-
 # http://qiita.com/shiraco/items/8971e38cbbd42ea32d73
 alias nswitch="source ~/.switch_proxy.zsh"
 nswitch

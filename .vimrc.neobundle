@@ -101,6 +101,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'moll/vim-node'
 NeoBundle 'teramako/jscomplete-vim'
 NeoBundle 'myhere/vim-nodejs-complete'
+NeoBundle 'posva/vim-vue'
 
 " Golang
 NeoBundle 'fatih/vim-go'

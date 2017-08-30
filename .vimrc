@@ -29,6 +29,10 @@ autocmd BufWritePre * call StripTrailingWhitespace()
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
 
+" 全角記号を正しく表示させる
+" http://ac-mopp.blogspot.jp/2012/10/mac-iterm2-vim.html
+set ambiwidth=double
+
 set undodir=D:$HOME/.vimbackup
 
 "" ステータスライン

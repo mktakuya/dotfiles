@@ -91,7 +91,7 @@ augroup END
 " 言語別設定
 " --------------------
 " 共通
-set autoindent smartindent expandtab nocindent tabstop=4 softtabstop=4 shiftwidth=4
+set autoindent smartindent expandtab nocindent tabstop=2 softtabstop=2 shiftwidth=2
 
 " HTML
 autocmd FileType html setlocal nocindent tabstop=2 softtabstop=2 shiftwidth=2
@@ -112,15 +112,15 @@ autocmd FileType python setl cinwords=if,elif,else,for,while,try,except,finally,
 autocmd FileType python setl tabstop=8
 
 " Ruby
-autocmd FileType ruby setl tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType ruby setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " erb
 autocmd FileType eruby setl tabstop=2 shiftwidth=2 softtabstop=2
 
 " slim
-autocmd FileType slim setl tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType slim setl tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
-autocmd FileType scss setl tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType scss setl tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 " Javascript
 autocmd filetype javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab

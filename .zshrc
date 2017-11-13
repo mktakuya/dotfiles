@@ -165,8 +165,10 @@ case ${OSTYPE} in darwin*)
 esac
 
 case ${OSTYPE} in darwin*)
-    export WORKON_HOME=$HOME/.virtualenvs
-    source /usr/local/bin/virtualenvwrapper.sh
+    if [ -e /usr/local/bin/virtualenvwrapper.sh ]; then
+        export WORKON_HOME=$HOME/.virtualenvs
+        source /usr/local/bin/virtualenvwrapper.sh
+    fi
 esac
 
 ### Java関連 ###
@@ -230,8 +232,10 @@ function peco-src() {
 zle -N peco-src
 
 # http://qiita.com/shiraco/items/8971e38cbbd42ea32d73
-alias nswitch="source ~/.switch_proxy.zsh"
-nswitch
+if [ -e "$HOME/.switch_proxy.zsh" ]; then
+    alias nswitch="source ~/.switch_proxy.zsh"
+    nswitch
+fi
 
 # added by travis gem
 [ -f /Users/mktakuya/.travis/travis.sh ] && source /Users/mktakuya/.travis/travis.sh

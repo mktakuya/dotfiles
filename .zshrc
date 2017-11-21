@@ -232,8 +232,8 @@ function peco-src() {
 zle -N peco-src
 
 # http://qiita.com/shiraco/items/8971e38cbbd42ea32d73
+alias nswitch="source ~/.switch_proxy.zsh"
 if [ -e "$HOME/.switch_proxy.zsh" ]; then
-    alias nswitch="source ~/.switch_proxy.zsh"
     nswitch
 fi
 

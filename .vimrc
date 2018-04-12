@@ -64,7 +64,7 @@ set ruler
 set showmatch
 set laststatus=2
 set statusline =%F%r%h%=
-set cursorline
+set nocursorline
 set colorcolumn=80
 
 " マウス関連

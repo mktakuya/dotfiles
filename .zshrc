@@ -252,3 +252,6 @@ if [ -f '/Users/mktakuya/.go_appengine/google-cloud-sdk/completion.zsh.inc' ]; t
 autoload -U compinit
 compinit -u
 
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

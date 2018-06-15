@@ -26,3 +26,5 @@
 	root = /Users/mktakuya/dev/src
 [core]
 	excludesfile = /Users/mktakuya/.gitignore_global
+[url "https://"]
+	insteadOf = git://

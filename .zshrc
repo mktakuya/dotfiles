@@ -252,6 +252,7 @@ if [ -f '/Users/mktakuya/.go_appengine/google-cloud-sdk/completion.zsh.inc' ]; t
 autoload -U compinit
 compinit -u
 
+export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

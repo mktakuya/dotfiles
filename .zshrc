@@ -212,7 +212,7 @@ alias gore="gore -autoimport"
 case ${OSTYPE} in darwin*)
     export PATH="/usr/local/go/bin:$PATH"
     export GOROOT=`go env GOROOT`
-    export GOPATH="$HOME/dev"
+    export GOPATH="$HOME/dev/go"
     export PATH="$PATH:$GOPATH/bin"
 esac
 

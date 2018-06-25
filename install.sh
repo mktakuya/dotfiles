@@ -10,3 +10,4 @@ done
 
 mkdir ~/.vimbackup
 
+ln -Fis $PWD/.config/nvim $HOME/.config/nvim

@@ -1,0 +1,11 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# Syntax checker
+[[plugins]]
+repo = 'w0rp/ale'
+hook_add = 'source ~/.config/nvim/bundles/plugins/ale_settings.vim'
+
+# statusline plugin
+[[plugins]]
+repo = 'itchyny/lightline.vim'

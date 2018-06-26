@@ -19,3 +19,11 @@ repo = 'Shougo/neco-vim'
 
 [[plugins]]
 repo = 'Shougo/neco-syntax'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+hook_add = 'source ~/.config/nvim/bundles/plugins/vim-quickrun.vim'

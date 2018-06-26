@@ -11,6 +11,9 @@ set laststatus=2
 
 set fileencoding=utf-8
 
+set background=dark
+set termguicolors
+
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
 

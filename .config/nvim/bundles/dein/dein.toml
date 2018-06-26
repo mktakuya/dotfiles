@@ -13,3 +13,9 @@ repo = 'itchyny/lightline.vim'
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = 'source ~/.config/nvim/bundles/plugins/deoplete.vim'
+
+[[plugins]]
+repo = 'Shougo/neco-vim'
+
+[[plugins]]
+repo = 'Shougo/neco-syntax'

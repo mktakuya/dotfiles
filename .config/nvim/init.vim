@@ -14,6 +14,8 @@ set fileencoding=utf-8
 set background=dark
 set termguicolors
 
+set clipboard+=unnamedplus
+
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
 

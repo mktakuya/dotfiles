@@ -11,3 +11,8 @@ hook_add = 'source ~/.config/nvim/bundles/plugins/deoplete-clang.vim'
 repo = 'fatih/vim-go'
 on_ft = ['go']
 hook_add = 'source ~/.config/nvim/bundles/plugins/vim-go.vim'
+
+[[plugins]]
+repo = 'zchee/deoplete-go'
+build = 'make'
+on_ft = ['go']

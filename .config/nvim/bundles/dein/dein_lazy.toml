@@ -16,6 +16,10 @@ on_ft = ['c', 'cpp', 'cmake']
 hook_add = 'source ~/.config/nvim/bundles/plugins/deoplete-clang.vim'
 
 [[plugins]]
+repo = 'fishbullet/deoplete-ruby'
+on_ft = ['ruby']
+
+[[plugins]]
 repo = 'fatih/vim-go'
 on_ft = ['go']
 hook_add = 'source ~/.config/nvim/bundles/plugins/vim-go.vim'

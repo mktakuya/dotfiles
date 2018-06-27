@@ -11,6 +11,11 @@ repo = 'tpope/vim-rails'
 on_ft = ['ruby']
 
 [[plugins]]
+repo = 'iurifq/ctrlp-rails.vim'
+on_ft = ['ruby']
+depends = ['ctrlp.vim']
+
+[[plugins]]
 repo = 'zchee/deoplete-clang'
 on_ft = ['c', 'cpp', 'cmake']
 hook_add = 'source ~/.config/nvim/bundles/plugins/deoplete-clang.vim'

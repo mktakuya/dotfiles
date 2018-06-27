@@ -157,17 +157,12 @@ esac
 
 # MacVim関連
 case ${OSTYPE} in darwin*)
-    if [ $OLD_DOTFILES = 1 ]; then
-        if [ -f /Applications/MacVim.app/Contents/MacOS/Vim ]; then
-            alias v='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-            alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-            alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-        fi
-    else
-        alias v=nvim
-        alias vi=nvim
-        alias vim=nvim
+    if [ -f /Applications/MacVim.app/Contents/MacOS/Vim ]; then
+        alias macvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
     fi
+    alias v=nvim
+    alias vi=nvim
+    alias vim=nvim
 esac
 
 case ${OSTYPE} in darwin*)

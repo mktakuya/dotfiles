@@ -155,70 +155,64 @@ let g:indent_guides_enable_on_vim_startup = 1
 " 外部ファイル
 "------------------------------------
 
-if $OLD_DOTFILES == 1
-  " 補完関連
-  source ~/dotfiles/.vimrc.completion
+" 補完関連
+source ~/dotfiles/.vimrc.completion
 
-  " unite.vim
-  "source ~/dotfiles/.vimrc.unite
+" unite.vim
+"source ~/dotfiles/.vimrc.unite
 
-  " neobundle
-  source ~/dotfiles/.vimrc.neobundle
-endif
+" neobundle
+source ~/dotfiles/.vimrc.neobundle
 
 
 "------------------------------------
 " プラグイン設定
 "------------------------------------
-if $OLD_DOTFILES == 1
-  echo 'old mode'
-  " vim-quickrun
-  let g:quickrun_config = {'*': {'hook/time/enable': '1'},}
+" vim-quickrun
+let g:quickrun_config = {'*': {'hook/time/enable': '1'},}
 
-  " vim-nodejs-complete
-  setl omnifunc=jscomplete#CompleteJS
-  if !exists('g:neocomplcache_omni_functions')
-    let g:neocomplcache_omni_functions = {}
-  endif
-  let g:neocomplcache_omni_functions.javascript = 'nodejscomplete#CompleteJS'
-  let g:node_usejscomplete = 1
-
-  " syntastic (nodejs)
-  let g:syntastic_check_on_open=0 "ファイルを開いたときはチェックしない
-  let g:syntastic_check_on_save=1 "保存時にはチェック
-  let g:syntastic_check_on_wq = 0 " wqではチェックしない
-  let g:syntastic_auto_loc_list=1 "エラーがあったら自動でロケーションリストを開く
-  let g:syntastic_loc_list_height=6 "エラー表示ウィンドウの高さ
-  set statusline+=%#warningmsg# "エラーメッセージの書式
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
-  let g:syntastic_javascript_checkers = ['eslint'] "ESLintを使う
-  let g:syntastic_mode_map = {
-        \ 'mode': 'active',
-        \ 'active_filetypes': ['javascript'],
-        \ 'passive_filetypes': []
-        \ }
-
-  " neocomplcache
-  "" <TAB>: completion.
-  inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-  inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
-  let g:neocomplcache_force_overwrite_completefunc=1
-  let g:neocomplcache_enable_camel_case_completion = 0
-
-  " taglist.vim
-  set tags=tags
-  nmap <F8> :Tlist
-
-  " NERDTreeToggle
-  nmap <F9> :NERDTreeToggle
-  let NERDTreeShowHidden = 1
-  let g:NERDTreeWinSize = 40
-
-  " vim-go
-  let g:go_fmt_command = "goimports"
+" vim-nodejs-complete
+setl omnifunc=jscomplete#CompleteJS
+if !exists('g:neocomplcache_omni_functions')
+  let g:neocomplcache_omni_functions = {}
 endif
+let g:neocomplcache_omni_functions.javascript = 'nodejscomplete#CompleteJS'
+let g:node_usejscomplete = 1
 
+" syntastic (nodejs)
+let g:syntastic_check_on_open=0 "ファイルを開いたときはチェックしない
+let g:syntastic_check_on_save=1 "保存時にはチェック
+let g:syntastic_check_on_wq = 0 " wqではチェックしない
+let g:syntastic_auto_loc_list=1 "エラーがあったら自動でロケーションリストを開く
+let g:syntastic_loc_list_height=6 "エラー表示ウィンドウの高さ
+set statusline+=%#warningmsg# "エラーメッセージの書式
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_javascript_checkers = ['eslint'] "ESLintを使う
+let g:syntastic_mode_map = {
+      \ 'mode': 'active',
+      \ 'active_filetypes': ['javascript'],
+      \ 'passive_filetypes': []
+      \ }
+
+" neocomplcache
+"" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
+let g:neocomplcache_force_overwrite_completefunc=1
+let g:neocomplcache_enable_camel_case_completion = 0
+
+" taglist.vim
+set tags=tags
+nmap <F8> :Tlist
+
+" NERDTreeToggle
+nmap <F9> :NERDTreeToggle
+let NERDTreeShowHidden = 1
+let g:NERDTreeWinSize = 40
+
+" vim-go
+let g:go_fmt_command = "goimports"
 
 set fileformats=unix,dos,mac
 " □とか○の文字があってもカーソル位置がずれないようにする

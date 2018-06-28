@@ -114,7 +114,6 @@ case ${OSTYPE} in
         ;;
 esac
 
-alias v=vim
 alias rv='r vim'
 alias g=git
 alias sl=ls
@@ -159,9 +158,11 @@ esac
 # MacVim関連
 case ${OSTYPE} in darwin*)
     if [ -f /Applications/MacVim.app/Contents/MacOS/Vim ]; then
-        alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-        alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+        alias macvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
     fi
+    alias v=nvim
+    alias vi=nvim
+    alias vim=nvim
 esac
 
 case ${OSTYPE} in darwin*)
@@ -245,9 +246,6 @@ export GO15VENDOREXPERIMENT=1
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/mktakuya/.go_appengine/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/mktakuya/.go_appengine/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/mktakuya/.go_appengine/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/mktakuya/.go_appengine/google-cloud-sdk/completion.zsh.inc'; fi
 
 autoload -U compinit
 compinit -u

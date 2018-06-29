@@ -39,3 +39,7 @@ hook_add = 'source ~/.config/nvim/bundles/plugins/nerdtree.vim'
 [[plugins]]
 repo = 'ntpeters/vim-better-whitespace'
 hook_add = 'source ~/.config/nvim/bundles/plugins/vim-better-whitespace.vim'
+
+[[plugins]]
+repo = 'neovim/node-host'
+build = 'npm install'

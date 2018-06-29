@@ -33,3 +33,9 @@ hook_add = 'source ~/.config/nvim/bundles/plugins/vim-go.vim'
 repo = 'zchee/deoplete-go'
 build = 'make'
 on_ft = ['go']
+
+[[plugins]]
+repo = 'billyvg/tigris.nvim'
+on_ft = ['javascript', 'javascript.jsx']
+build = './install.sh'
+hook_add = 'source ~/.config/nvim/bundles/plugins/tigris.vim'

@@ -39,3 +39,11 @@ repo = 'billyvg/tigris.nvim'
 on_ft = ['javascript', 'javascript.jsx']
 build = './install.sh'
 hook_add = 'source ~/.config/nvim/bundles/plugins/tigris.vim'
+
+[[plugins]]
+repo = 'moll/vim-node'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'MaxMEllon/vim-jsx-pretty'
+on_ft = ['javascript', 'javascript.jsx']

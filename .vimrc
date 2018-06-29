@@ -75,62 +75,6 @@ autocmd InsertEnter * highlight StatusLine guifg=#ccdc90 guibg=#2E4340
 autocmd InsertLeave * highlight StatusLine guifg=#2E4340 guibg=#ccdc90
 augroup END
 
-" --------------------
-" 言語別設定
-" --------------------
-" 共通
-set autoindent smartindent expandtab nocindent tabstop=2 softtabstop=2 shiftwidth=2
-
-" HTML
-autocmd FileType html setlocal nocindent tabstop=2 softtabstop=2 shiftwidth=2
-
-" CSS
-autocmd FileType css setlocal nocindent tabstop=2 softtabstop=2 shiftwidth=2
-
-" C言語
-autocmd FileType c setlocal cindent tabstop=8 softtabstop=8 shiftwidth=8
-
-" PHP http://tech.basicinc.jp/PHP/2013/06/17/vim-php/
-autocmd FileType php set  dictionary=~/.vim/dict/php.dict
-autocmd FileType php setl cindent
-autocmd FileType php setl tabstop=2 shiftwidth=2 softtabstop=2
-
-" Python
-autocmd FileType python setl cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd FileType python setl tabstop=8
-
-" Ruby
-autocmd FileType ruby setl expandtab tabstop=2 shiftwidth=2 softtabstop=2
-
-" erb
-autocmd FileType eruby setl tabstop=2 shiftwidth=2 softtabstop=2
-
-" slim
-autocmd FileType slim setl tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-
-autocmd FileType scss setl tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-
-" Javascript
-autocmd filetype javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2 expandtab
-
-" JSON
-autocmd BufNewFile,BufRead *.json  set filetype=json
-autocmd BufNewFile,BufRead *.json  set tabstop=2 shiftwidth=2 expandtab
-
-" Coffee Script
-autocmd FileType coffee setl tabstop=2 shiftwidth=2 softtabstop=2
-
-" Jinja
-autocmd FileType jinja setl tabstop=8 softtabstop=2 shiftwidth=2
-
-" Markdown
-
-" TeX
-let g:tex_conceal=''
-
-" YAML
-autocmd FileType yaml,yml setl tabstop=2 shiftwidth=2 softtabstop=2
-
 "------------------------------------
 " indent guides
 "------------------------------------

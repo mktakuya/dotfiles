@@ -33,23 +33,11 @@ match ZenkakuSpace /　/
 " http://ac-mopp.blogspot.jp/2012/10/mac-iterm2-vim.html
 set ambiwidth=double
 
-set undodir=D:$HOME/.vimbackup
-
 "" ステータスライン
 " ステータスラインに文字コード/改行文字種別を表示
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 " 常にステータス行を表示
 set laststatus=2
-
-" バックアップ関連
-set backup
-set backupdir=$HOME/.vimbackup
-
-" Swapファイル関連
-set swapfile
-set directory=$HOME/.vimbackup
-set updatecount=100
-set updatetime=180000
 
 " Backspace関連
 set backspace=start,eol,indent

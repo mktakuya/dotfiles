@@ -75,13 +75,5 @@ autocmd InsertEnter * highlight StatusLine guifg=#ccdc90 guibg=#2E4340
 autocmd InsertLeave * highlight StatusLine guifg=#2E4340 guibg=#ccdc90
 augroup END
 
-"------------------------------------
-" indent guides
-"------------------------------------
-hi IndentGuidesOdd  ctermbg=white
-hi IndentGuidesEven ctermbg=white
-let g:indent_guides_guide_size = 1
-let g:indent_guides_enable_on_vim_startup = 1
-
 syntax on
 filetype plugin indent on

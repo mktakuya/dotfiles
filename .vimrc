@@ -40,6 +40,9 @@ set ignorecase
 set smartcase
 set wrapscan
 
+set noswapfile
+set nobackup
+
 set wildmenu wildmode=list:full
 
 syntax on

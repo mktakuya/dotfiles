@@ -33,12 +33,6 @@ match ZenkakuSpace /　/
 " http://ac-mopp.blogspot.jp/2012/10/mac-iterm2-vim.html
 set ambiwidth=double
 
-"" ステータスライン
-" ステータスラインに文字コード/改行文字種別を表示
-set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
-" 常にステータス行を表示
-set laststatus=2
-
 " Backspace関連
 set backspace=start,eol,indent
 

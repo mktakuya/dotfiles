@@ -23,7 +23,7 @@
 [credential]
 	helper = osxkeychain
 [ghq]
-	root = /Users/mktakuya/dev/src
+	root = /Users/mktakuya/dev/go/src
 [core]
 	excludesfile = /Users/mktakuya/.gitignore_global
 [url "https://"]

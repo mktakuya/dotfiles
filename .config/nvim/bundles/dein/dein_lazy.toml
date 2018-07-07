@@ -43,3 +43,7 @@ on_ft = ['javascript']
 [[plugins]]
 repo = 'MaxMEllon/vim-jsx-pretty'
 on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'zchee/deoplete-jedi'
+on_ft = ['python']

@@ -51,3 +51,11 @@ on_ft = ['javascript', 'javascript.jsx']
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
 on_ft = ['python']
+
+[[plugins]]
+repo = 'landaire/deoplete-swift'
+on_ft = ['swift']
+
+[[plugins]]
+repo = 'keith/swift.vim'
+on_ft = ['swift']

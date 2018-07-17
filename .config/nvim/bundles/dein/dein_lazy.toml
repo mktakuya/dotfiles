@@ -11,6 +11,10 @@ repo = 'tpope/vim-rails'
 on_ft = ['ruby']
 
 [[plugins]]
+repo = 'thoughtbot/vim-rspec'
+on_ft = ['ruby']
+
+[[plugins]]
 repo = 'iurifq/ctrlp-rails.vim'
 on_ft = ['ruby']
 depends = ['ctrlp.vim']

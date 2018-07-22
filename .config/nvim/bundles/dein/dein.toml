@@ -46,3 +46,6 @@ build = 'npm install'
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = 'wakatime/vim-wakatime'

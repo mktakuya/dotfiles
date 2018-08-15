@@ -49,3 +49,6 @@ repo = 'cohama/lexima.vim'
 
 [[plugins]]
 repo = 'wakatime/vim-wakatime'
+
+[[plugins]]
+repo = 'yuttie/comfortable-motion.vim'

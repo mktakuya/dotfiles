@@ -200,10 +200,11 @@ alias node-coffee='coffee --compile --output js coffee && node'
 
 
 ### pyenv ###
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
+if [ -e "$HOME/.pyenv" ]; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
 
 ### nodebrew ###
 export PATH=$HOME/.nodebrew/current/bin:$PATH

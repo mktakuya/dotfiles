@@ -5,8 +5,6 @@ if &compatible
   set nocompatible
 endif
 
-let g:python_host_prog = $PYENV_ROOT . '/shims/python'
-let g:python3_host_prog = $PYENV_ROOT . '/shims/python3'
 let g:ruby_host_prog = $RBENV_ROOT . '/shims/ruby'
 
 set number

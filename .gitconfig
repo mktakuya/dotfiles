@@ -28,3 +28,5 @@
 	excludesfile = /Users/mktakuya/.gitignore_global
 [url "https://"]
 	insteadOf = git://
+[hub]
+	protocol = https

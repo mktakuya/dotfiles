@@ -209,6 +209,13 @@ fi
 ### nodebrew ###
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+### hub ###
+case ${OSTYPE} in darwin*)
+    if [ `which hub` ]; then
+        alias git=hub
+    fi
+esac
+
 ### Golang ###
 alias gore="gore -autoimport"
 case ${OSTYPE} in darwin*)

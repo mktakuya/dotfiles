@@ -118,6 +118,8 @@ alias rv='r vim'
 alias g=git
 alias sl=ls
 alias be='bundle exec'
+alias dcup='docker-compose up'
+alias dce='docker-compose exec'
 
 # cdコマンド実行後、lsを実行する
 function cd() {

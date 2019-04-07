@@ -145,6 +145,9 @@ export PYTHONSTARTUP="$HOME/.pythonstartup"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
 
+export PATH="$HOME/.ndenv/bin:$PATH"
+eval "$(ndenv init -)"
+
 ### PostgreSQL関連
 # http://qiita.com/tstomoki/items/0f1a930bd42a8e1fdaac
 export PGDATA=/usr/local/var/postgres

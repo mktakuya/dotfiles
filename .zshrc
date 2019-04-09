@@ -120,7 +120,7 @@ alias sl=ls
 alias be='bundle exec'
 alias dcup='docker-compose up'
 alias dce='docker-compose exec'
-alias dcl='docker-compose logs'
+alias dcl='docker-compose logs -f'
 
 # cdコマンド実行後、lsを実行する
 function cd() {

@@ -9,6 +9,7 @@ hook_add = 'source ~/.config/nvim/bundles/plugins/ale_settings.vim'
 # statusline plugin
 [[plugins]]
 repo = 'itchyny/lightline.vim'
+hook_add = 'source ~/.config/nvim/bundles/plugins/lightline.vim'
 
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'

@@ -119,6 +119,7 @@ alias g=git
 alias sl=ls
 alias be='bundle exec'
 alias dcup='docker-compose up'
+alias dcr='docker-compose run'
 alias dce='docker-compose exec'
 alias dcl='docker-compose logs -f'
 

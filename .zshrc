@@ -114,8 +114,18 @@ case ${OSTYPE} in
         ;;
 esac
 
+alias g='git'
+alias ga='git add'
+alias gd='git diff'
+alias gs='git status'
+alias gp='git push'
+alias gb='git branch'
+alias gst='git status'
+alias gco='git checkout'
+alias gf='git fetch'
+alias gc='git commit'
+
 alias rv='r vim'
-alias g=git
 alias sl=ls
 alias be='bundle exec'
 alias dcup='docker-compose up'

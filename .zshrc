@@ -213,9 +213,6 @@ if [ -e "$HOME/.pyenv" ]; then
     eval "$(pyenv init -)"
 fi
 
-### nodebrew ###
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
 ### hub ###
 case ${OSTYPE} in darwin*)
     if [ `which hub` ]; then

@@ -21,6 +21,8 @@ set clipboard+=unnamedplus
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
 
+nnoremap <Esc><Esc> :noh<CR>
+
 set autoread
 set hidden
 set noswapfile

@@ -57,3 +57,7 @@ repo = 'yuttie/comfortable-motion.vim'
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
 hook_add = 'source ~/.config/nvim/bundles/plugins/vim-indent-guides.vim'
+
+[[plugins]]
+repo = 'jremmen/vim-ripgrep'
+hook_add = 'source ~/.config/nvim/bundles/plugins/vim-ripgrep.vim'

@@ -62,7 +62,7 @@ on_ft = ['swift']
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
-on_ft = ['html']
+on_ft = ['html', 'eruby']
 
 [[plugins]]
 repo = 'tpope/vim-surround'

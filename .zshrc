@@ -245,6 +245,7 @@ esac
 ### peco ###
 case ${OSTYPE} in darwin*)
     bindkey '^]' peco-src
+    bindkey '^[' peco-vim
 esac
 
 function peco-src() {
@@ -256,6 +257,16 @@ function peco-src() {
     zle -R -c
 }
 zle -N peco-src
+
+function peco-vim() {
+    local src=$(git ls-files | peco --query "$LBUFFER" --prompt "vim>")
+    if [ -n "$src" ]; then
+        BUFFER="vim $src"
+        zle accept-line
+    fi
+    zle -R -c
+}
+zle -N peco-vim
 
 # http://qiita.com/shiraco/items/8971e38cbbd42ea32d73
 alias nswitch="source ~/.switch_proxy.zsh"

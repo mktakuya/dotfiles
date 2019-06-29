@@ -73,3 +73,10 @@ hook_add = 'source ~/.config/nvim/bundles/plugins/vim-ripgrep.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+# Vim に Language Server Protocol クライアント機能を導入して Rubyの補完機能を復活させた
+# https://qiita.com/suketa/items/c368b3acd11403c23169
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'

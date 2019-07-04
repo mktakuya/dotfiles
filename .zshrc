@@ -163,6 +163,8 @@ eval "$(rbenv init - zsh)"
 export PATH="$HOME/.ndenv/bin:$PATH"
 eval "$(ndenv init -)"
 
+alias ys="yarn start"
+
 ### PostgreSQL関連
 # http://qiita.com/tstomoki/items/0f1a930bd42a8e1fdaac
 export PGDATA=/usr/local/var/postgres

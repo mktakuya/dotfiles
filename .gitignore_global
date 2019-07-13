@@ -1,6 +1,7 @@
 .ruby-version
 .envrc
 .node-version
+.pryrc
 
 .idea
 

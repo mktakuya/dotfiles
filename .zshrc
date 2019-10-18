@@ -24,6 +24,12 @@ setopt correct           # コマンドのスペルを訂正する
 setopt magic_equal_subst # =以降も補完する(--prefix=/usrなど)
 setopt prompt_subst      # プロンプト定義内で変数置換やコマンド置換を扱う setopt notify            # バックグラウンドジョブの状態変化を即時報告する setopt equals            # =commandを`which command`と同じ処理にする
 
+### for macOS 10.15
+
+if [[ `sw_vers -productVersion` =~ "10.15" ]]; then
+    export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
+fi
+
 ### Complement ###
 autoload -U compinit; compinit # 補完機能を有効にする
 setopt auto_list               # 補完候補を一覧で表示する(d)

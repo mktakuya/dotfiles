@@ -169,6 +169,9 @@ eval "$(rbenv init - zsh)"
 export PATH="$HOME/.ndenv/bin:$PATH"
 eval "$(ndenv init -)"
 
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+
 alias ys="yarn start"
 
 ### PostgreSQL関連

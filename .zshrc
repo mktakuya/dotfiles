@@ -290,6 +290,13 @@ export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+function pssh() {
+  local host=$(grep -r 'Host ' $HOME/.ssh/* | cut -d' ' -f2 | sort | peco)
+
+  if [ ! -z "$host" ]; then
+    ssh "$host"
+  fi
+}
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`

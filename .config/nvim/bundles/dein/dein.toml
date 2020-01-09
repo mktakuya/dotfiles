@@ -81,3 +81,7 @@ repo = 'autozimu/LanguageClient-neovim'
 rev = 'next'
 build = 'bash install.sh'
 hook_add = 'source ~/.config/nvim/bundles/plugins/LanguageClient-neovim.vim'
+
+[[plugins]]
+repo = 'jistr/vim-nerdtree-tabs'
+hook_add = 'source ~/.config/nvim/bundles/plugins/vim-nerdtree-tabs.vim'

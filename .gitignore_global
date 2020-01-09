@@ -1,3 +1,4 @@
+.rubocop.yml
 .ruby-version
 .envrc
 .node-version

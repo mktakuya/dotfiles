@@ -23,6 +23,11 @@ match ZenkakuSpace /　/
 
 nnoremap <Esc><Esc> :noh<CR>
 
+" tab
+nnoremap st :<C-u>tabnew<CR>
+nnoremap sn gt
+nnoremap sp gT
+
 set autoread
 set hidden
 set noswapfile

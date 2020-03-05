@@ -85,3 +85,9 @@ hook_add = 'source ~/.config/nvim/bundles/plugins/LanguageClient-neovim.vim'
 [[plugins]]
 repo = 'jistr/vim-nerdtree-tabs'
 hook_add = 'source ~/.config/nvim/bundles/plugins/vim-nerdtree-tabs.vim'
+
+# rubyで定義元メソッドへジャンプ ctags+vim-tags - 気軽に楽しくプログラムと遊ぶ
+# http://tamata78.hatenablog.com/entry/2015/07/16/211555
+[[plugins]]
+repo = 'szw/vim-tags'
+hook_add = 'source ~/.config/nvim/bundles/plugins/vim-tags.vim'

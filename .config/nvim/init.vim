@@ -40,5 +40,6 @@ set binary noeol
 runtime! bundles/dein/dein.vim
 
 autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
+autocmd BufNewFile,BufRead *.coffee setlocal filetype=coffee
 
 filetype plugin indent on

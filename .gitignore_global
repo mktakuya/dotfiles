@@ -3,8 +3,8 @@
 .envrc
 .node-version
 .pryrc
-.ctags
-Gemfile.lock.tags
+.tags
+.Gemfile.lock.tags
 
 .idea
 .generators

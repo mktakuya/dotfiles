@@ -271,12 +271,6 @@ function peco-src() {
 }
 zle -N peco-src
 
-# http://qiita.com/shiraco/items/8971e38cbbd42ea32d73
-alias nswitch="source ~/.switch_proxy.zsh"
-if [ -e "$HOME/.switch_proxy.zsh" ]; then
-    nswitch
-fi
-
 # added by travis gem
 [ -f /Users/mktakuya/.travis/travis.sh ] && source /Users/mktakuya/.travis/travis.sh
 

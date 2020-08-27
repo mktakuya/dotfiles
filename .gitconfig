@@ -28,3 +28,5 @@
 	excludesfile = /Users/mktakuya/.gitignore_global
 [hub]
 	protocol = https
+[pull]
+	rebase = false

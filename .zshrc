@@ -114,6 +114,7 @@ if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 case ${OSTYPE} in
     darwin*)
         alias ls="ls -G"
+	alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
         ;;
     linux*)
         alias ls="ls --color"

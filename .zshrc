@@ -170,9 +170,6 @@ eval "$(rbenv init - zsh)"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
-export PATH="$HOME/.ndenv/bin:$PATH"
-eval "$(ndenv init -)"
-
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 

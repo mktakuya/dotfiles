@@ -241,13 +241,6 @@ if [ -e "$HOME/.pyenv" ]; then
     eval "$(pyenv init -)"
 fi
 
-### hub ###
-case ${OSTYPE} in darwin*)
-    if [ `which hub` ]; then
-        alias git=hub
-    fi
-esac
-
 ### Golang ###
 alias gore="gore -autoimport"
 case ${OSTYPE} in darwin*)

@@ -99,3 +99,7 @@ hook_add = 'source ~/.config/nvim/bundles/plugins/vim-css3-syntax.vim'
 [[plugins]]
 repo = 'cakebaker/scss-syntax.vim'
 hook_add = 'source ~/.config/nvim/bundles/plugins/scss-syntax.vim'
+
+[[plugins]]
+repo = 'soramugi/auto-ctags.vim'
+hook_add = 'source ~/.config/nvim/bundles/plugins/auto-ctags.vim'

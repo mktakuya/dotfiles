@@ -1,0 +1,7 @@
+--exclude=.git
+--exclude=log
+--exclude=node_modules
+--exclude=jquery.*.js
+--exclude=jquery-*.js
+--exclude=vendor
+--exclude=*.min.js

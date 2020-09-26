@@ -12,6 +12,7 @@ export AUTOFEATURE=true  # autotestでfeatureを動かす
 # MacのPATH
 case ${OSTYPE} in darwin*)
     export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+    export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 esac
 
 #bindkey -e               # キーバインドをemacsモードに設定

@@ -184,9 +184,9 @@ export PGDATA=/usr/local/var/postgres
 compdef mosh=ssh
 
 # direnv
-case ${OSTYPE} in darwin*)
+if [ -x "`which go`" ]; then
     eval "$(direnv hook zsh)"
-esac
+fi
 
 # MacVim関連
 case ${OSTYPE} in darwin*)

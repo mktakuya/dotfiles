@@ -248,12 +248,12 @@ fi
 
 ### Golang ###
 alias gore="gore -autoimport"
-case ${OSTYPE} in darwin*)
+if [ -x "`which go`" ]; then
     export PATH="/usr/local/go/bin:$PATH"
     export GOROOT=`go env GOROOT`
     export GOPATH="$HOME"
     export PATH="$PATH:$GOPATH/bin"
-esac
+fi
 
 ### peco ###
 case ${OSTYPE} in darwin*)

@@ -217,6 +217,13 @@ case ${OSTYPE} in darwin*)
     fi
 esac
 
+### gh-completions ###
+case ${OSTYPE} in darwin*)
+    if [ -e /usr/local/bin/gh ]; then
+	eval "$(gh completion -s zsh)"
+    fi
+esac
+
 ### cabal ###
 export PATH=${HOME}/.cabal/bin:$PATH
 

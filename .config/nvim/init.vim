@@ -18,6 +18,8 @@ set termguicolors
 
 set clipboard+=unnamedplus
 
+set ambiwidth=double
+
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
 

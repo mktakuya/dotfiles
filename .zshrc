@@ -261,9 +261,10 @@ case ${OSTYPE} in darwin*)
 esac
 
 function peco-src() {
-    local src=$(ghq list --full-path | peco --query "$LBUFFER" --prompt "cd>")
+    local ghq_root=$(ghq root)
+    local src=$(ghq list | peco --query "$LBUFFER" --prompt "cd>")
     if [ -n "$src" ]; then
-        BUFFER="cd $src"
+        BUFFER="cd $ghq_root/$src"
         zle accept-line
     fi
     zle -R -c

@@ -25,6 +25,8 @@ match ZenkakuSpace /　/
 
 nnoremap <Esc><Esc> :noh<CR>
 
+nnoremap cp :<C-u>let @* = expand("%:p")<CR>
+
 " tab
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sn gt

@@ -238,6 +238,11 @@ esac
 ### coffeescriptのコンパイル ###
 alias node-coffee='coffee --compile --output js coffee && node'
 
+### Mac環境でRails内で別プロセスが立ち上がる処理をすると落ちてしまうとき
+### https://medium.com/sora-developers/56f352273404
+case ${OSTYPE} in darwin*)
+    export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+esac
 
 ### pyenv ###
 if [ -e "$HOME/.pyenv" ]; then

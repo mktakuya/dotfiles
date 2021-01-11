@@ -39,6 +39,12 @@ set hidden
 set noswapfile
 set nobackup
 
+set smartindent
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
 " [\ No newline at end of fileの修正 - Qiita](https://qiita.com/lemtosh469/items/b3a5b3b40d9f44dfbd06)
 set binary noeol
 

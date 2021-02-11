@@ -184,7 +184,7 @@ export PGDATA=/usr/local/var/postgres
 compdef mosh=ssh
 
 # direnv
-if [ -x "`which go`" ]; then
+if [ -x "`which direnv`" ]; then
     eval "$(direnv hook zsh)"
 fi
 

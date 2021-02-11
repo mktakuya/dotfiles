@@ -6,8 +6,8 @@ if &compatible
 endif
 
 let g:ruby_host_prog = $RBENV_ROOT . '/shims/ruby'
-let g:python_host_prog = '/usr/bin/python'
-let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_prog = '/Users/mktakuya/.pyenv/shims/python'
+let g:python3_host_prog = '/Users/mktakuya/.pyenv/shims/python3'
 
 set number
 set cursorline

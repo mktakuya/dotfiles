@@ -16,6 +16,7 @@ case ${OSTYPE} in darwin*)
     if [ -e /opt/homebrew/bin ]; then
         export PATH="/opt/homebrew/bin:$PATH"
     fi
+		export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
 esac
 
 #bindkey -e               # キーバインドをemacsモードに設定

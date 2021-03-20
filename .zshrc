@@ -13,6 +13,9 @@ export AUTOFEATURE=true  # autotestでfeatureを動かす
 case ${OSTYPE} in darwin*)
     export PATH=/usr/local/bin:/usr/local/sbin:$PATH
     export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+    if [ -e /opt/homebrew/bin ]; then
+        export PATH="/opt/homebrew/bin:$PATH"
+    fi
 esac
 
 #bindkey -e               # キーバインドをemacsモードに設定

@@ -7,6 +7,7 @@
     df = diff
     co = checkout
     b = branch
+	push-f = push --force-with-lease
 
 [color]
     ui = true

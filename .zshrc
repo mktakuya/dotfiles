@@ -178,6 +178,10 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
+if [ -d "$HOME/.tfenv" ]; then
+	export PATH="$HOME/.tfenv/bin:$PATH"
+fi
+
 alias ys="yarn start"
 
 ### PostgreSQL関連

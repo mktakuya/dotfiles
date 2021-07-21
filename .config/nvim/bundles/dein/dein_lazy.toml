@@ -87,3 +87,8 @@ on_ft = ['slim']
 [[plugins]]
 repo = "kchmck/vim-coffee-script"
 on_ft = ['coffee']
+
+[[plugins]]
+repo = "hashivim/vim-terraform"
+on_ft = ['terraform']
+hook_add = 'source ~/.config/nvim/bundles/plugins/vim-terraform.vim'

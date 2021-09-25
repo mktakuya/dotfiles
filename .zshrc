@@ -315,3 +315,5 @@ function pssh() {
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+complete -o nospace -C /Users/mktakuya/.tfenv/versions/0.14.11/terraform terraform

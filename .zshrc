@@ -184,6 +184,10 @@ fi
 
 alias ys="yarn start"
 
+if [ -d "$HOME/.poetry" ]; then
+	export PATH="$PATH:$HOME/.poetry/bin"
+fi
+
 ### PostgreSQL関連
 # http://qiita.com/tstomoki/items/0f1a930bd42a8e1fdaac
 export PGDATA=/usr/local/var/postgres

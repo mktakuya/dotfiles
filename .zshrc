@@ -222,6 +222,11 @@ case ${OSTYPE} in darwin*)
     if [ -e /usr/local/share/zsh-completions ]; then
         fpath=(/usr/local/share/zsh-completions $fpath)
     fi
+
+		# for Google Cloud SDK
+		if [ -e /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ]; then
+			source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+		fi
 esac
 
 ### gh-completions ###

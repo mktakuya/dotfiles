@@ -1,7 +1,7 @@
 #!/bin/sh
 cd $(dirname $0)
 
-mkdir -p ~/.config
+mkdir -p ~/.vim
 
 for dotfile in .?*
 do
@@ -10,5 +10,3 @@ do
         ln -Fis "$PWD/$dotfile" $HOME
     fi
 done
-
-ln -Fis $PWD/.config/nvim $HOME/.config/

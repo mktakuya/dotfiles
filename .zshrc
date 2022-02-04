@@ -16,7 +16,7 @@ case ${OSTYPE} in darwin*)
     if [ -e /opt/homebrew/bin ]; then
         export PATH="/opt/homebrew/bin:$PATH"
     fi
-		export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
+    export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
 esac
 
 #bindkey -e               # キーバインドをemacsモードに設定
@@ -27,7 +27,9 @@ setopt auto_cd           # ディレクトリ名の入力のみで移動する
 setopt auto_pushd        # cd時にディレクトリスタックにpushdする
 setopt correct           # コマンドのスペルを訂正する
 setopt magic_equal_subst # =以降も補完する(--prefix=/usrなど)
-setopt prompt_subst      # プロンプト定義内で変数置換やコマンド置換を扱う setopt notify            # バックグラウンドジョブの状態変化を即時報告する setopt equals            # =commandを`which command`と同じ処理にする
+setopt prompt_subst      # プロンプト定義内で変数置換やコマンド置換を扱う
+setopt notify            # バックグラウンドジョブの状態変化を即時報告する
+setopt equals            # =commandを`which command`と同じ処理にする
 
 ### for macOS 10.15
 
@@ -119,7 +121,7 @@ if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 case ${OSTYPE} in
     darwin*)
         alias ls="ls -G"
-	alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
+  alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
         ;;
     linux*)
         alias ls="ls --color"
@@ -179,13 +181,13 @@ export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
 if [ -d "$HOME/.tfenv" ]; then
-	export PATH="$HOME/.tfenv/bin:$PATH"
+  export PATH="$HOME/.tfenv/bin:$PATH"
 fi
 
 alias ys="yarn start"
 
 if [ -d "$HOME/.poetry" ]; then
-	export PATH="$PATH:$HOME/.poetry/bin"
+  export PATH="$PATH:$HOME/.poetry/bin"
 fi
 
 ### PostgreSQL関連
@@ -200,16 +202,6 @@ if [ -x "`which direnv`" ]; then
     eval "$(direnv hook zsh)"
 fi
 
-# MacVim関連
-case ${OSTYPE} in darwin*)
-    if [ -f /Applications/MacVim.app/Contents/MacOS/Vim ]; then
-        alias macvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-    fi
-    alias v=nvim
-    alias vi=nvim
-    alias vim=nvim
-esac
-
 case ${OSTYPE} in darwin*)
     if [ -e /usr/local/bin/virtualenvwrapper.sh ]; then
         export WORKON_HOME=$HOME/.virtualenvs
@@ -223,16 +215,16 @@ case ${OSTYPE} in darwin*)
         fpath=(/usr/local/share/zsh-completions $fpath)
     fi
 
-		# for Google Cloud SDK
-		if [ -e /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ]; then
-			source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-		fi
+    # for Google Cloud SDK
+    if [ -e /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ]; then
+      source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+    fi
 esac
 
 ### gh-completions ###
 case ${OSTYPE} in darwin*)
     if [ -e /usr/local/bin/gh ]; then
-	eval "$(gh completion -s zsh)"
+  eval "$(gh completion -s zsh)"
     fi
 esac
 

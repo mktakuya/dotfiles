@@ -45,5 +45,10 @@ set nobackup
 
 set wildmenu wildmode=list:full
 
+set autoindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
 syntax on
 filetype plugin indent on

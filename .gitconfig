@@ -21,14 +21,10 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-[credential]
-	helper = osxkeychain
 [ghq]
-	root = /Users/mktakuya/src
+	root = /home/mktakuya/src
 [core]
-	excludesfile = /Users/mktakuya/.gitignore_global
-[hub]
-	protocol = https
+	excludesfile = /home/mktakuya/.gitignore_global
 [pull]
 	rebase = false
 [init]

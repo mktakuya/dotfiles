@@ -33,9 +33,11 @@ setopt equals            # =commandを`which command`と同じ処理にする
 
 ### for macOS 10.15
 
-if [[ `sw_vers -productVersion` =~ "10.15" ]]; then
-    export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
-fi
+case ${OSTYPE} in darwin*)
+    if [[ `sw_vers -productVersion` =~ "10.15" ]]; then
+        export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
+    fi
+esac
 
 ### Complement ###
 autoload -U compinit; compinit # 補完機能を有効にする
@@ -232,7 +234,9 @@ esac
 export PATH=${HOME}/.cabal/bin:$PATH
 
 ### git の補完 ###
-fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+case ${OSTYPE} in darwin*)
+    fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+esac
 
 ### Swift ###
 case ${OSTYPE} in darwin*)
@@ -265,9 +269,9 @@ if [ -x "`which go`" ]; then
 fi
 
 ### peco ###
-case ${OSTYPE} in darwin*)
+if type "peco" > /dev/null 2>&1; then
     bindkey '^]' peco-src
-esac
+fi
 
 function peco-src() {
     local ghq_root=$(ghq root)

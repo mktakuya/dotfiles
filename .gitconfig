@@ -1,31 +1,36 @@
 [user]
-	name = Takuya Mukohira
-	email = takuya.mk96@gmail.com
+  name = Takuya Mukohira
+  email = takuya.mk96@gmail.com
 
 [alias]
-    st = status -sb
-    df = diff
-    co = checkout
-    b = branch
-	push-f = push --force-with-lease
+  st = status -sb
+  df = diff
+  co = checkout
+  b = branch
+  push-f = push --force-with-lease
 
 [color]
-    ui = true
-    diff = true
+  ui = true
+  diff = true
 
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+
 [ghq]
-	root = /home/mktakuya/src
+  root = /Users/mktakuya/src
+
 [core]
-	excludesfile = /home/mktakuya/.gitignore_global
+  excludesfile = /Users/mktakuya/.gitignore_global
+
 [pull]
-	rebase = false
+  rebase = false
+
 [init]
-	defaultBranch = master
+  defaultBranch = master

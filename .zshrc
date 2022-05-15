@@ -303,6 +303,12 @@ function pssh() {
   fi
 }
 
+if type nvim > /dev/null; then
+  alias vim=nvim
+  alias v=nvim
+  export EDITOR=nvim
+fi
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh

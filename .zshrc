@@ -176,9 +176,6 @@ export PYTHONSTARTUP="$HOME/.pythonstartup"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
@@ -203,13 +200,6 @@ compdef mosh=ssh
 if [ -x "`which direnv`" ]; then
     eval "$(direnv hook zsh)"
 fi
-
-case ${OSTYPE} in darwin*)
-    if [ -e /usr/local/bin/virtualenvwrapper.sh ]; then
-        export WORKON_HOME=$HOME/.virtualenvs
-        source /usr/local/bin/virtualenvwrapper.sh
-    fi
-esac
 
 ### zsh-completions ###
 case ${OSTYPE} in darwin*)
@@ -254,9 +244,14 @@ esac
 
 ### pyenv ###
 if [ -e "$HOME/.pyenv" ]; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+else
+  echo "TODO: 下記を参考に pyenv / pyenv-virtualenv を設定すること"
+  echo "    NeoVim用のPython環境を整える - Qiita"
+  echo "    https://qiita.com/sigwyg/items/41630f8754c2028a7a9f"
 fi
 
 ### Golang ###
@@ -307,6 +302,12 @@ function pssh() {
     ssh "$host"
   fi
 }
+
+if type nvim > /dev/null; then
+  alias vim=nvim
+  alias v=nvim
+  export EDITOR=nvim
+fi
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`

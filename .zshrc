@@ -220,6 +220,11 @@ case ${OSTYPE} in darwin*)
     fi
 esac
 
+### aws-vault ###
+if [ -e /usr/local/bin/aws-vault ]; then
+  eval "$(aws-vault --completion-script-zsh)"
+fi
+
 ### cabal ###
 export PATH=${HOME}/.cabal/bin:$PATH
 

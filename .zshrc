@@ -333,3 +333,6 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 complete -o nospace -C /Users/mktakuya/.tfenv/versions/0.14.11/terraform terraform
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# added by Snowflake SnowSQL installer v1.2
+export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH

@@ -15,6 +15,7 @@ case ${OSTYPE} in darwin*)
     export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
     if [ -e /opt/homebrew/bin ]; then
         export PATH="/opt/homebrew/bin:$PATH"
+        export HOMEBREW_NO_AUTO_UPDATE=1
     fi
     export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
 esac

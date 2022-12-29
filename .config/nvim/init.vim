@@ -7,6 +7,10 @@ set splitright
 set clipboard=unnamed
 set hls
 
+" Neovim v0.4.3でファイルを開くと一文字目がgに置換され謎のコマンドが入力される話 - JoTech
+" https://hiroki-sawano.hatenablog.com/entry/2020/07/09/223247
+cnoremap 1130 <C-u>undo<CR>
+
 let g:python_host_prog = $PYENV_ROOT.'/versions/neovim2/bin/python'
 let g:python3_host_prog = $PYENV_ROOT.'/versions/neovim3/bin/python'
 

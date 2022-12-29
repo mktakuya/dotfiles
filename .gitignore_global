@@ -4,6 +4,7 @@
 .pryrc
 .tags
 .Gemfile.lock.tags
+.gitmessage
 
 .idea
 .generators

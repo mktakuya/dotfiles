@@ -239,6 +239,14 @@ case ${OSTYPE} in darwin*)
     export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:$PATH
 esac
 
+### PATH to JetBrains IDE ###
+case ${OSTYPE} in darwin*)
+  if [ -e "/Users/mktakuya/Library/Application\ Support/JetBrains/Toolbox/scripts" ]; then
+    export PATH=/Users/mktakuya/Library/Application Support/JetBrains/Toolbox/scripts:$PATH
+  fi
+esac
+
+
 ### coffeescriptのコンパイル ###
 alias node-coffee='coffee --compile --output js coffee && node'
 

@@ -310,12 +310,6 @@ function pssh() {
   fi
 }
 
-if type nvim > /dev/null; then
-  alias vim=nvim
-  alias v=nvim
-  export EDITOR=nvim
-fi
-
 disable r
 
 # tabtab source for serverless package

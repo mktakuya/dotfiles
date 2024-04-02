@@ -299,6 +299,11 @@ zle -N peco-src
 # for golang glide
 export GO15VENDOREXPERIMENT=1
 
+# Dart 2.19
+if [ -e "/opt/homebrew/opt/dart@2.19" ]; then
+  export PATH="/opt/homebrew/opt/dart@2.19/bin:$PATH"
+fi
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/mktakuya/.go_appengine/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/mktakuya/.go_appengine/google-cloud-sdk/path.zsh.inc'; fi
 

@@ -13,6 +13,7 @@ fun! StripTrailingWhitespace()
     %s/\s\+$//e
 endfun
 autocmd BufWritePre * call StripTrailingWhitespace()
+autocmd FileType c setlocal foldmethod=syntax
 
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
@@ -54,3 +55,4 @@ set expandtab
 
 syntax on
 filetype plugin indent on
+

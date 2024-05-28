@@ -268,6 +268,11 @@ else
   echo "    https://qiita.com/sigwyg/items/41630f8754c2028a7a9f"
 fi
 
+### Rust ###
+if [ -e "$HOME/.cargo" ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 ### Golang ###
 alias gore="gore -autoimport"
 if [ -x "`which go`" ]; then

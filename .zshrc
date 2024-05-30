@@ -305,8 +305,8 @@ zle -N peco-src
 export GO15VENDOREXPERIMENT=1
 
 # Dart 2.19
-if [ -e "/opt/homebrew/opt/dart@2.19" ]; then
-  export PATH="/opt/homebrew/opt/dart@2.19/bin:$PATH"
+if [[ -f ~/.dvm/scripts/dvm ]]; then
+  . ~/.dvm/scripts/dvm
 fi
 
 # The next line updates PATH for the Google Cloud SDK.

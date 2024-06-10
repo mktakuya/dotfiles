@@ -347,3 +347,11 @@ export PATH="$HOME/.poetry/bin:$PATH"
 
 # added by Snowflake SnowSQL installer v1.2
 export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
+
+# pnpm
+export PNPM_HOME="/Users/takuya.mukohira/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

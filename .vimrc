@@ -20,6 +20,7 @@ match ZenkakuSpace /　/
 
 set ambiwidth=double
 
+set eol
 set backspace=start,eol,indent
 
 set clipboard=unnamed

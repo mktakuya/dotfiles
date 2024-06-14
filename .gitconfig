@@ -45,6 +45,3 @@
 [commit]
   gpgsign = true
 
-[credential]
-  helper = osxkeychain
-  UseHttpPath = true

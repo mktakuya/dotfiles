@@ -285,6 +285,7 @@ fi
 ### peco ###
 if type "peco" > /dev/null 2>&1; then
     bindkey '^]' peco-src
+    bindkey '^b' peco-git-switch
 fi
 
 function peco-src() {
@@ -297,6 +298,16 @@ function peco-src() {
     zle -R -c
 }
 zle -N peco-src
+
+function peco-git-switch() {
+  local branch=$(git branch | sed -r "s/^[ \*]+//" | peco)
+  if [ -n "$branch" ]; then
+    BUFFER="git switch $branch"
+    zle accept-line
+  fi
+  zle -R -c
+}
+zle -N peco-git-switch
 
 # added by travis gem
 [ -f /Users/mktakuya/.travis/travis.sh ] && source /Users/mktakuya/.travis/travis.sh

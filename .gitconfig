@@ -4,7 +4,7 @@
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIxWKB2MCxGSBSaTuXm4szFrbn4MpyPQJHH/tUD16stJ
 
 [alias]
-  st = status -sb
+  st = status -sbu
   df = diff
   co = checkout
   b = branch

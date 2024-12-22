@@ -350,6 +350,10 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
+if [ -x "`which tenv`" ]; then
+  source "$HOME/.tenv.completion.zsh"
+fi
+
 # added by Snowflake SnowSQL installer v1.2
 export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
 

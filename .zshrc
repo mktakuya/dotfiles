@@ -180,10 +180,6 @@ eval "$(rbenv init - zsh)"
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
-if [ -d "$HOME/.tfenv" ]; then
-  export PATH="$HOME/.tfenv/bin:$PATH"
-fi
-
 alias ys="yarn start"
 
 if [ -d "$HOME/.poetry" ]; then
@@ -351,8 +347,6 @@ function pssh() {
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
-
-complete -o nospace -C /Users/mktakuya/.tfenv/versions/1.4.6/terraform terraform
 
 export PATH="$HOME/.poetry/bin:$PATH"
 

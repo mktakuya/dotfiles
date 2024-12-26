@@ -205,6 +205,7 @@ case ${OSTYPE} in darwin*)
     fi
 
     # for Google Cloud SDK
+
     if [ -e /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc ]; then
       source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
     fi
@@ -352,6 +353,13 @@ export PATH="$HOME/.poetry/bin:$PATH"
 
 if [ -x "`which tenv`" ]; then
   source "$HOME/.tenv.completion.zsh"
+fi
+
+
+if [ -x "`which gcloud`" ]; then
+  if [ -e /opt/homebrew/share/zsh/site-functions/_google_cloud_sdk ]; then
+    source "/opt/homebrew/share/zsh/site-functions/_google_cloud_sdk"
+  fi
 fi
 
 # added by Snowflake SnowSQL installer v1.2

@@ -259,10 +259,6 @@ if [ -e "$HOME/.pyenv" ]; then
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
-else
-  echo "TODO: 下記を参考に pyenv / pyenv-virtualenv を設定すること"
-  echo "    NeoVim用のPython環境を整える - Qiita"
-  echo "    https://qiita.com/sigwyg/items/41630f8754c2028a7a9f"
 fi
 
 ### Rust ###

@@ -190,6 +190,12 @@ fi
 # http://qiita.com/tstomoki/items/0f1a930bd42a8e1fdaac
 export PGDATA=/usr/local/var/postgres
 
+
+if [ -e /opt/homebrew/opt/libpq ]; then
+  export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+fi
+
+
 # mosh
 compdef mosh=ssh
 

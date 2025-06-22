@@ -5,7 +5,10 @@
       "Bash(git add:*)",
       "Bash(git push:*)",
       "Bash(gh pr create:*)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(git commit:*)",
+      "Bash(./install.sh)",
+      "Bash(git check-ignore:*)"
     ],
     "deny": []
   }

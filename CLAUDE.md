@@ -19,6 +19,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **エディタ設定**: Vim（`.vimrc`）とNeovim（`.config/nvim/`）の両方に対応した設定
 - **Git設定**: `.gitconfig` にはカスタムエイリアスと1Password SSH署名設定
 - **言語固有設定**: Python（`.pythonstartup`）、Ruby（`.pryrc`）などの言語環境設定
+- **Claude Code設定**: 
+  - `.claude/` - このリポジトリ固有のClaude Code設定とファイル
+  - `dot_claude/` - ホームディレクトリに展開される汎用Claude Code設定（`~/.claude/`として配置）
 
 ### Neovimプラグインシステム
 
@@ -45,7 +48,11 @@ Docker Compose: `dcup`, `dcdown`, `dcr`, `dce`, `dcl`
 
 ## 開発ワークフロー
 
-このリポジトリはシンボリックリンクベースのアプローチを使用し、`install.sh` スクリプトがリポジトリファイルからホームディレクトリ内の期待される場所へのシンボリックリンクを作成します。`.config/nvim` ディレクトリは全体として特別にシンボリックリンクされます。
+このリポジトリはシンボリックリンクベースのアプローチを使用し、`install.sh` スクリプトがリポジトリファイルからホームディレクトリ内の期待される場所へのシンボリックリンクを作成します。
+
+### 特別な処理
+- `.config/nvim` ディレクトリは全体として特別にシンボリックリンクされます
+- `dot_claude/` ディレクトリは `~/.claude/` としてコピーされ、全プロジェクト共通のClaude Code設定として使用されます
 
 ## ツール統合
 

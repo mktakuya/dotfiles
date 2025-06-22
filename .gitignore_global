@@ -11,6 +11,9 @@
 .run
 .generators
 
+.vscode/tasks.json
+.vscode/launch.json
+
 ### https://raw.github.com/github/gitignore/2b7d841c01806236d26e81f512095717396ebcb8/Global/Windows.gitignore
 
 # Windows thumbnail cache files

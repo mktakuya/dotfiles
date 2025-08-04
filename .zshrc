@@ -379,6 +379,10 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+if [[ -f "$HOME/Documents/Gateway_CA-Cloudflare_Managed_G1.pem" ]]; then
+  export NODE_EXTRA_CA_CERTS="$HOME/Documents/Gateway_CA-Cloudflare_Managed_G1.pem"
+fi
+
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/mktakuya/.docker/completions $fpath)
 autoload -Uz compinit

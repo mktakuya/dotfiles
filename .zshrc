@@ -362,6 +362,10 @@ if [ -x "`which gcloud`" ]; then
   if [ -e /opt/homebrew/share/zsh/site-functions/_google_cloud_sdk ]; then
     source "/opt/homebrew/share/zsh/site-functions/_google_cloud_sdk"
   fi
+
+  alias gae-ssh='(){ gcloud --project $1 app instances ssh $(gcloud --project $1 --format json app instances list --service $2 --sort-by="~instance.startTime" | jq -r ".[0].id") --service $2 --version $(gcloud --project $1 --format json app instances list --service $2 --sort-by="~instance.startTime" | jq -r ".[0].version") }'
+  alias gae-scp='function _gae_scp(){ pj="$1"; sv="$2"; inst=$(gcloud app instances list --project "$pj" --service "$sv" --format=json --sort-by="~instance.startTime" | jq -r ".[0].id"); ver=$(gcloud app instances list --project "$pj" --service "$sv" --format=json --sort-by="~instance.startTime" | jq -r ".[0].version"); gcloud app instances scp --project "$pj" --service "$sv" --version "$ver" "$inst"; }; _gae_scp'
+  alias gae-scp-pull='function _g(){ pj="$1"; sv="$2"; rpath="$3"; lpath="$4"; inst=$(gcloud app instances list --project "$pj" --service "$sv" --format=json --sort-by="~instance.startTime" | jq -r ".[0].id"); ver=$(gcloud app instances list --project "$pj" --service "$sv" --format=json --sort-by="~instance.startTime" | jq -r ".[0].version"); gcloud app instances scp --project "$pj" --service "$sv" --version "$ver" "$inst:$rpath" "$lpath"; }; _g'
 fi
 
 # added by Snowflake SnowSQL installer v1.2

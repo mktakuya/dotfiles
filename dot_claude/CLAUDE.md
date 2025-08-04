@@ -27,6 +27,7 @@
 - **ghq**: リポジトリ管理（ルート: `/Users/mktakuya/src`）
 - **direnv**: 自動環境変数読み込み
 - **1Password**: SSH署名によるGitコミット
+- **acli**: Atlassian Jira / Confluence の公式CLIツール Jiraチケット参照時はこちらを利用
 
 ## 推奨ワークフロー
 

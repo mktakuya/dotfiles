@@ -81,6 +81,10 @@ done
 autoload -Uz compinit
 compinit -C
 
+if type "colima" > /dev/null 2>&1; then
+  source <(colima completion zsh)
+fi
+
 
 # ----- プロンプトを設定する
 autoload -U colors && colors

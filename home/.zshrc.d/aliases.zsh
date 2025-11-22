@@ -1,4 +1,5 @@
 alias g="git"
+alias ls="ls --color"
 alias sl="ls"
 alias be="bundle exec"
 

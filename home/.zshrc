@@ -70,5 +70,30 @@ for file in "$HOME/.zshrc.d/"*.zsh(N); do
   source "$file"
 done
 
+
+# ----- 補完を有効にする
 autoload -Uz compinit
 compinit -C
+
+
+# ----- プロンプトを設定する
+autoload -U colors && colors
+
+tmp_prompt="%{${fg[cyan]}%}%n%# %{${reset_color}%}"
+tmp_prompt2="%{${fg[cyan]}%}%_> %{${reset_color}%}"
+tmp_rprompt="%{${fg[green]}%}[%~]%{${reset_color}%}"
+tmp_sprompt="%{${fg[yellow]}%}%r is correct? [Yes, No, Abort, Edit]:%{${reset_color}%}"
+
+if [ ${UID} -eq 0 ]; then
+  tmp_prompt="%B%U${tmp_prompt}%u%b"
+  tmp_prompt2="%B%U${tmp_prompt2}%u%b"
+  tmp_rprompt="%B%U${tmp_rprompt}%u%b"
+  tmp_sprompt="%B%U${tmp_sprompt}%u%b"
+fi
+
+PROMPT=$tmp_prompt
+PROMPT2=$tmp_prompt2
+RPROMPT=$tmp_rprompt
+SPROMPT=$tmp_sprompt
+
+[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"

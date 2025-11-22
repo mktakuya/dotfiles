@@ -42,6 +42,12 @@ if [[ -d $JETBRAINS_TOOLBOX_PATH ]] then
   export PATH="$PATH:$JETBRAINS_TOOLBOX_PATH"
 fi
 
+if type "go" > /dev/null 2>&1; then
+  export GOPATH=$HOME/go
+  export GOBIN=$GOPATH/bin
+  export PATH=$PATH:$GOBIN
+fi
+
 # ----- 関数を定義する
 function peco-src() {
   local ghq_root=$(ghq root)

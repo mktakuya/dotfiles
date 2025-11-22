@@ -1,9 +1,0 @@
-[[plugins]]
-repo = "hashivim/vim-terraform"
-on_ft = ['terraform']
-hook_add = 'source ~/.config/nvim/bundles/plugins/vim-terraform.vim'
-
-[[plugins]]
-repo = "leafgarland/typescript-vim"
-on_ft = ["typescript"]
-hook_add = 'source ~/.config/nvim/bundles/plugins/typescript-vim.vim'

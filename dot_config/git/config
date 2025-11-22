@@ -25,10 +25,7 @@
   process = git-lfs filter-process
 
 [ghq]
-  root = /Users/mktakuya/src
-
-[core]
-  excludesfile = /Users/mktakuya/.gitignore_global
+  root = ~/src
 
 [pull]
   rebase = false

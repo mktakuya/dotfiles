@@ -1,9 +1,0 @@
-set incsearch
-set hlsearch
-
-set ignorecase
-set smartcase
-
-" クリップボード
-set clipboard+=unnamed
-set clipboard=unnamed

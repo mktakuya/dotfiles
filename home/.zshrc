@@ -52,6 +52,11 @@ if type "go" > /dev/null 2>&1; then
   export PATH=$PATH:$GOBIN
 fi
 
+if [[ -d $HOME/.pyenv ]]; then
+  export PATH="$PATH:$HOME/.pyenv/bin"
+fi
+
+
 # ----- 関数を定義する
 function peco-src() {
   local ghq_root=$(ghq root)

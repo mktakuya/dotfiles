@@ -1,0 +1,43 @@
+[user]
+  name = Takuya Mukohira
+  email = takuya.mk96@gmail.com
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIxWKB2MCxGSBSaTuXm4szFrbn4MpyPQJHH/tUD16stJ
+
+[alias]
+  st = status -sbu
+  df = diff
+  co = checkout
+  b = branch
+  push-f = push --force-with-lease
+
+[color]
+  ui = true
+  diff = true
+
+[filter "media"]
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
+
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+
+[ghq]
+  root = ~/src
+
+[pull]
+  rebase = false
+
+[init]
+  defaultBranch = main
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+  gpgsign = true

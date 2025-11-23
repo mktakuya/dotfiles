@@ -15,5 +15,16 @@ done
 mkdir -p "$HOME/.config"
 for dir in "$PWD/dot_config"/*; do
   name=$(basename "$dir")
+
   ln -nfs "$dir" "$HOME/.config/$name"
+
+  # git/config は OS 別に切り替え
+  if [ "$name" = "git" ]; then
+    if [ "$(uname)" = "Darwin" ]; then
+      ln -nfs "$dir/config.macos" "$HOME/.config/git/config"
+    else
+      ln -nfs "$dir/config.other" "$HOME/.config/git/config"
+    fi
+    continue
+  fi
 done

@@ -1,2 +1,4 @@
 home/.claude/*
 !home/.claude/CLAUDE.md
+
+dot_config/git/config

@@ -43,3 +43,4 @@ Claude Code と対話するユーザーの情報は下記です。
 - Notion
 - Figma
 
+Webアプリケーションの開発中は、 Playwright MCP を利用してWebブラウザを操作し動作確認をする。

@@ -1,4 +1,6 @@
 home/.claude/*
 !home/.claude/CLAUDE.md
+!home/.claude/hooks
+!home/.claude/settings.json
 
 dot_config/git/config

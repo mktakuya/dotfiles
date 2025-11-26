@@ -31,9 +31,16 @@ zle -N history-beginning-search-forward-end history-search-end
 
 
 # ----- Homebrew
-if type "brew" > /dev/null 2>&1; then
-  eval "$(brew shellenv)"
-fi
+case ${OSTYPE} in darwin*)
+  if [ -e /opt/homebrew/bin ]; then
+    export PATH="$PATH:/opt/homebrew/bin:/opt/homebrew/sbin"
+    export HOMEBREW_NO_AUTO_UPDATE=1
+  fi
+
+  if type "brew" > /dev/null 2>&1; then
+    eval "$(brew shellenv)"
+  fi
+esac
 
 
 # ----- PATH を設定する

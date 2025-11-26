@@ -4,3 +4,5 @@ home/.claude/*
 !home/.claude/settings.json
 
 dot_config/git/config
+
+home/.zshrc.d/*.local.zsh

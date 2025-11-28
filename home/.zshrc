@@ -93,6 +93,12 @@ for file in "$HOME/.zshrc.d/"*.zsh(N); do
 done
 
 
+# ----- direnv をセットアップする
+if type "direnv" > /dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
+
+
 # ----- 補完を有効にする
 autoload -Uz compinit
 compinit -C

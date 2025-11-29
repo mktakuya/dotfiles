@@ -107,6 +107,10 @@ if type "colima" > /dev/null 2>&1; then
   source <(colima completion zsh)
 fi
 
+if type "npm" > /dev/null 2>&1; then
+  source <(npm completion zsh)
+fi
+
 if type "pnpm" > /dev/null 2>&1; then
   source <(pnpm completion zsh)
 fi

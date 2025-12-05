@@ -1,4 +1,7 @@
 alias g="git"
+alias gb="git branch"
+alias gst="git status"
+
 alias ls="ls --color"
 alias sl="ls"
 alias be="bundle exec"

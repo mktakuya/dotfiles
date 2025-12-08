@@ -1,5 +1,4 @@
 {
-  "spinnerTipsEnabled": false,
   "hooks": {
     "Notification": [
       {
@@ -21,5 +20,7 @@
         ]
       }
     ]
-  }
+  },
+  "spinnerTipsEnabled": false,
+  "alwaysThinkingEnabled": true
 }

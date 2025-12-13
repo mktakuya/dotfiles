@@ -8,3 +8,5 @@ nmap <Esc><Esc> :nohlsearch<Enter>
 set expandtab
 set tabstop=2
 set shiftwidth=0
+
+set mouse-=a

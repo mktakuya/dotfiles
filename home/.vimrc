@@ -10,3 +10,4 @@ set tabstop=2
 set shiftwidth=0
 
 set mouse-=a
+set clipboard+=unnamed

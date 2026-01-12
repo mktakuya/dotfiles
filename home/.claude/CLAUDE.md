@@ -34,6 +34,7 @@ Claude Code と対話するユーザーの情報は下記です。
 
 - GitHub に関する操作は gh コマンドを使用する
   - `github.com` のURLを渡されたときは、 gh コマンドを利用して情報を取得してください
+  - Pull Request の作成を依頼されたときは、必ずリポジトリの Pull Request テンプレートファイルを探し、あれば利用してください
 - Jira の情報取得は acli コマンドを使用する
   - `*.atlassian.net` のURLを渡されたときは、 acli コマンドを利用して情報を取得してください
 

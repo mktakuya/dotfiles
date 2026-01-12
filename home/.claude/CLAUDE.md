@@ -23,6 +23,7 @@ Claude Code と対話するユーザーの情報は下記です。
 - 必要に応じて技術的な背景も日本語で説明する
 
 
+
 ## ツール
 
 ### Git
@@ -47,4 +48,4 @@ Claude Code と対話するユーザーの情報は下記です。
 - Figma
 
 Webアプリケーションの開発中は、 Playwright MCP を利用してWebブラウザを操作し動作確認をする。
-ユーザーは JetBrains IDE を使用しており、開発用のサーバーはすでに起動済である。そのため、 Claude Code 自身がサーバーを起動する必要は無い。
+ユーザーは JetBrains IDE を使用しており、 rails server や sidekiq あるいは pnpm dev といった開発用のサーバーはすでに起動済である。そのため、 Claude Code 自身がサーバーを起動する必要は無い。

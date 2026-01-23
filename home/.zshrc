@@ -46,6 +46,7 @@ esac
 # ----- PATH を設定する
 if [[ -d "$HOME/bin" ]]; then
   export PATH="$PATH:$HOME/bin"
+  export PATH="$PATH:$HOME/.local/bin"
 fi
 
 JETBRAINS_TOOLBOX_PATH="$HOME/Library/Application Support/JetBrains/Toolbox/scripts"

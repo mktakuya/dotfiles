@@ -69,6 +69,7 @@ Claude Code と対話するユーザーの情報は下記です。
       - 説明: `--description "説明文"`
       - 親チケット: `--parent KEY-123`
     - ステータス変更: `acli jira workitem transition --key "KEY-123" --status "In Progress"`
+    - チケット編集（description更新）: `/update-jira-ticket` スキルを使うこと
     - プロジェクト一覧: `acli jira project list`
 
 

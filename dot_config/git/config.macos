@@ -41,3 +41,4 @@
 
 [commit]
   gpgsign = true
+  template = /Users/takuya.mukohira/.config/git/message

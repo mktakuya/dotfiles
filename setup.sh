@@ -28,3 +28,8 @@ for dir in "$PWD/dot_config"/*; do
     continue
   fi
 done
+
+# ----- Bundler
+if command -v bundle > /dev/null 2>&1; then
+  bundle config set --global default_cli_command install
+fi

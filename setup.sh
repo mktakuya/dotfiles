@@ -2,6 +2,9 @@
 
 cd "$(cd "$(dirname "$0")" && pwd)" || exit 1
 
+# ----- AGENTS.md（Codex / Gemini CLI 等から参照）
+ln -nfs "$PWD/home/AGENTS.md" "$HOME/AGENTS.md"
+
 # ----- $HOME 直下
 for src in "$PWD/home"/.*; do
   base=$(basename "$src")

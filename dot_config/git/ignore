@@ -1,4 +1,5 @@
 .envrc
+.npmrc
 compose.override.yaml
 
 .idea

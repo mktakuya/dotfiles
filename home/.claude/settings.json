@@ -21,9 +21,10 @@
       }
     ]
   },
-  "spinnerTipsEnabled": false,
-  "alwaysThinkingEnabled": true,
   "enabledPlugins": {
-    "slack@claude-plugins-official": true
-  }
+    "slack@claude-plugins-official": true,
+    "ruby-lsp@claude-plugins-official": true
+  },
+  "spinnerTipsEnabled": false,
+  "alwaysThinkingEnabled": true
 }

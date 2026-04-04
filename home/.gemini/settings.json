@@ -34,7 +34,8 @@
     }
   },
   "general": {
-    "enableNotifications": true
+    "enableNotifications": true,
+    "defaultModel": "gemini-2.5-pro"
   },
   "ui": {
     "hideWindowTitle": true,

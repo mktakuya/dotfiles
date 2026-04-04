@@ -18,6 +18,13 @@
         "--header",
         "Authorization: Bearer ${TWILOG_API_KEY}"
       ]
+    },
+    "notion": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://mcp.notion.com/mcp"
+      ]
     }
   },
   "general": {

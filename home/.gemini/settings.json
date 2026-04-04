@@ -10,6 +10,12 @@
     "enabled": true
   },
   "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    },
     "twilog-mcp": {
       "command": "npx",
       "args": [

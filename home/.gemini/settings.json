@@ -39,7 +39,7 @@
   },
   "ui": {
     "hideWindowTitle": true,
-    "inlineThinkingMode": "hidden",
+    "inlineThinkingMode": "off",
     "showStatusInTitle": true,
     "hideTips": true,
     "hideBanner": true,

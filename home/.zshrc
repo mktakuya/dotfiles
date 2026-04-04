@@ -91,6 +91,11 @@ function peco-git-switch() {
 zle -N peco-git-switch
 
 
+# ----- 補完を有効にする
+autoload -Uz compinit
+compinit -C
+
+
 # ----- $HOME/.zshrc.d/*.zsh をロードする
 for file in "$HOME/.zshrc.d/"*.zsh(N); do
   source "$file"
@@ -102,10 +107,6 @@ if type "direnv" > /dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
 
-
-# ----- 補完を有効にする
-autoload -Uz compinit
-compinit -C
 
 if type "colima" > /dev/null 2>&1; then
   source <(colima completion zsh)

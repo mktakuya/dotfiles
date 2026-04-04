@@ -9,7 +9,17 @@
     "hasSeenNudge": true,
     "enabled": true
   },
-  "mcpServers": {},
+  "mcpServers": {
+    "twilog-mcp": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://twilog-mcp.togetter.dev/mcp",
+        "--header",
+        "Authorization: Bearer ${TWILOG_API_KEY}"
+      ]
+    }
+  },
   "general": {
     "enableNotifications": true
   },

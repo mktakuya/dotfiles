@@ -1,0 +1,26 @@
+{
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    },
+    "disableAlwaysAllow": false
+  },
+  "ide": {
+    "hasSeenNudge": true,
+    "enabled": true
+  },
+  "mcpServers": {},
+  "general": {
+    "enableNotifications": true
+  },
+  "ui": {
+    "hideWindowTitle": true,
+    "inlineThinkingMode": "full",
+    "showStatusInTitle": true,
+    "hideTips": true,
+    "hideBanner": true,
+    "hideFooter": true,
+    "showMemoryUsage": true,
+    "showLineNumbers": false
+  }
+}

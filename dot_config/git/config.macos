@@ -9,6 +9,7 @@
   co = checkout
   b = branch
   push-f = push --force-with-lease
+  bdelete = "!f () { git checkout $1; git branch|egrep -v '\\*|develop|main|staging'|xargs git branch -d; git fetch --prune; };f"
 
 [color]
   ui = true

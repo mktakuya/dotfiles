@@ -36,8 +36,19 @@
   },
   "enabledPlugins": {
     "slack@claude-plugins-official": true,
-    "ruby-lsp@claude-plugins-official": true
+    "ruby-lsp@claude-plugins-official": true,
+    "portal@smarthr-claude-plugins": true,
+    "figma@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "smarthr-claude-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "kufu/smarthr-claude-plugins"
+      }
+    }
   },
   "spinnerTipsEnabled": false,
-  "alwaysThinkingEnabled": true
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high"
 }

@@ -2,9 +2,6 @@
 
 cd "$(cd "$(dirname "$0")" && pwd)" || exit 1
 
-# ----- AGENTS.md（Codex / Gemini CLI 等から参照）
-ln -nfs "$PWD/home/AGENTS.md" "$HOME/AGENTS.md"
-
 # ----- $HOME 直下
 for src in "$PWD/home"/.*; do
   base=$(basename "$src")
@@ -12,6 +9,18 @@ for src in "$PWD/home"/.*; do
   [ "$base" = ".." ] && continue
 
   ln -nfs "$src" "$HOME/$base"
+done
+
+# ----- AGENTS.md
+ln -nfs "$PWD/home/AGENTS.md" "$HOME/AGENTS.md"
+
+# ----- Agent Skills
+mkdir -p ~/.claude/skills
+for skill in "$PWD/home/.agents/skills"/*/; do
+  name=$(basename "$skill")
+  [ "${name:0:1}" = "." ] && continue
+  [ -L ~/.claude/skills/"$name" ] && continue
+  ln -s "$skill" ~/.claude/skills/"$name"
 done
 
 # ----- $HOME/.config

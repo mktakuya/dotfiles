@@ -1,3 +1,6 @@
+home/.agents/skills/*
+!home/.agents/skills/.system/
+
 home/.claude/*
 !home/.claude/CLAUDE.md
 !home/.claude/hooks

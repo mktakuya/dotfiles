@@ -4,6 +4,7 @@ home/.agents/skills/*
 home/.claude/*
 !home/.claude/CLAUDE.md
 !home/.claude/hooks
+!home/.claude/scripts
 !home/.claude/commands
 !home/.claude/settings.json
 

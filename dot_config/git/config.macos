@@ -43,3 +43,6 @@
 [commit]
   gpgsign = true
   template = ~/.config/git/message
+
+[include]
+  path = ~/.config/git/config.local

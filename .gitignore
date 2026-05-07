@@ -13,5 +13,6 @@ home/.gemini/*
 !home/.gemini/settings.json
 
 dot_config/git/config
+dot_config/git/config.local
 
 home/.zshrc.d/*.local.zsh

@@ -34,11 +34,16 @@
       }
     ]
   },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/scripts/statusline.py"
+  },
   "enabledPlugins": {
     "slack@claude-plugins-official": true,
     "ruby-lsp@claude-plugins-official": true,
     "portal@smarthr-claude-plugins": true,
-    "figma@claude-plugins-official": true
+    "figma@claude-plugins-official": true,
+    "coderabbit@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "smarthr-claude-plugins": {
@@ -47,10 +52,6 @@
         "repo": "kufu/smarthr-claude-plugins"
       }
     }
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/scripts/statusline.py"
   },
   "spinnerTipsEnabled": false,
   "alwaysThinkingEnabled": true,

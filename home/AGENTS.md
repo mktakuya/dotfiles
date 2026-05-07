@@ -52,6 +52,11 @@
     - 関連する GitHub PR のレビューコメント URL、Slack スレッド URL、Notion ページ URL などがあればそのまま貼る
     - 自明な変更や件名だけで十分な場合は本文なしでよい
 
+### Pull Request
+
+- Pull Request は必ず **ドラフト** (`gh pr create --draft`) で作成する
+- レビュアーのアサインは自動で行わない（ユーザーが明示的に指示した場合のみ）
+
 ### コマンド
 
 - GitHub に関する操作は gh コマンドを使用する

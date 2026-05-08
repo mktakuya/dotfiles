@@ -1,6 +1,6 @@
 ---
 name: read-jira-workitem
-description: acli コマンドを使った Jira チケットの閲覧・検索・操作のリファレンス。
+description: Jira チケット ID（ABC-123 のような英大文字-数字形式）や *.atlassian.net の URL が渡されたときに使う。acli コマンドによる Jira チケットの閲覧・検索・操作のリファレンス。
 ---
 
 # Jira ワークアイテムの閲覧・検索・操作

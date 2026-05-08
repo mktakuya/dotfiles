@@ -73,8 +73,7 @@
   - `github.com` のURLを渡されたときは、 gh コマンドを利用して情報を取得してください
   - Pull Request の作成を依頼されたときは、必ずリポジトリの Pull Request テンプレートファイルを探し、あれば利用してください
 - Jira の情報取得は acli コマンドを使用する
-  - `*.atlassian.net` のURLを渡されたときは、 acli コマンドを利用して情報を取得してください
-  - acli の詳細な使い方は `/read-jira-workitem` スキルを参照すること
+  - `*.atlassian.net` の URL を渡されたとき、または Jira チケット ID（`ABC-123` のような `英大文字-数字` 形式）を渡されたときは、`/read-jira-workitem` スキルを呼び出し、acli コマンドで情報を取得すること
   - チケットの description を更新する場合は `/update-jira-workitem` スキルを使うこと
 
 ### MCP

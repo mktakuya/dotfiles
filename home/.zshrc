@@ -108,17 +108,23 @@ if type "direnv" > /dev/null 2>&1; then
 fi
 
 
-if type "colima" > /dev/null 2>&1; then
-  source <(colima completion zsh)
-fi
+# ----- 補完スクリプトをキャッシュしてロードする
+_cache_completion() {
+  local cmd=$1 cache_file="${ZSH_COMPLETION_CACHE_DIR}/_${cmd}"
+  if [[ ! -f "$cache_file" ]] || [[ "$(which $cmd)" -nt "$cache_file" ]]; then
+    $cmd completion zsh > "$cache_file" 2>/dev/null
+  fi
+  source "$cache_file"
+}
 
-if type "npm" > /dev/null 2>&1; then
-  source <(npm completion zsh)
-fi
+ZSH_COMPLETION_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh-completions"
+[[ -d "$ZSH_COMPLETION_CACHE_DIR" ]] || mkdir -p "$ZSH_COMPLETION_CACHE_DIR"
 
-if type "pnpm" > /dev/null 2>&1; then
-  source <(pnpm completion zsh)
-fi
+for cmd in colima npm pnpm; do
+  if type "$cmd" > /dev/null 2>&1; then
+    _cache_completion "$cmd"
+  fi
+done
 
 
 # ----- プロンプトを設定する

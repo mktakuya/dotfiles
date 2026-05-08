@@ -1,7 +1,4 @@
-home/.agents/skills/*
-!home/.agents/skills/.system/
-!home/.agents/skills/read-jira-workitem/
-!home/.agents/skills/update-jira-workitem/
+home/.agents/skills/.system/
 
 home/.claude/*
 !home/.claude/CLAUDE.md

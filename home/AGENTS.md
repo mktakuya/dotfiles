@@ -61,7 +61,9 @@
     - 変更の動機・背景・理由を説明する（「何を変えたか」ではなく「なぜ変えたか」）
     - 関連する GitHub PR のレビューコメント URL、Slack スレッド URL、Notion ページ URL などがあればそのまま貼る
     - 自明な変更や件名だけで十分な場合は本文なしでよい
-    - GitHub上で suggestion されたものを採用する場合、 Co-Authored-By を利用してレビュワーをクレジットすること
+    - 単なるコメントに対するコミットでは、 Co-Authored-By を利用しないこと
+    - GitHub上で Suggested change されたものを採用する場合、 Co-Authored-By を利用してレビュワーをクレジットすること
+    - Co-Authored-By に利用するユーザー名・メールアドレスは、 ~/.config/git/message を参照すること
 
 ### Pull Request
 

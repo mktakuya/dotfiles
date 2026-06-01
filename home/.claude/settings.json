@@ -1,4 +1,10 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(echo *)"
+    ]
+  },
+  "model": "opusplan",
   "hooks": {
     "Notification": [
       {

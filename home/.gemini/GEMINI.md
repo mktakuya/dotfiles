@@ -1,1 +1,0 @@
-/Users/mktakuya/src/github.com/mktakuya/dotfiles/home/AGENTS.md

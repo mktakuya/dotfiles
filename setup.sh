@@ -11,6 +11,11 @@ for src in "$PWD/home"/.*; do
   ln -nfs "$src" "$HOME/$base"
 done
 
+# ----- Gemini は使わなくなったので、過去に作ったリンクだけ削除
+if [ -L "$HOME/.gemini" ] && [ "$(readlink "$HOME/.gemini")" = "$PWD/home/.gemini" ]; then
+  rm "$HOME/.gemini"
+fi
+
 # ----- AGENTS.md
 ln -nfs "$PWD/home/AGENTS.md" "$HOME/AGENTS.md"
 

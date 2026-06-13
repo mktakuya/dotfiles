@@ -64,6 +64,7 @@
     - 単なるコメントに対するコミットでは、 Co-Authored-By を利用しないこと
     - GitHub上で Suggested change されたものを採用する場合、 Co-Authored-By を利用してレビュワーをクレジットすること
     - Co-Authored-By に利用するユーザー名・メールアドレスは、 ~/.config/git/message を参照すること
+    - Codex によるコミットの場合は、末尾に `Co-authored-by: Codex <noreply@openai.com>` を含めること
 
 ### Pull Request
 

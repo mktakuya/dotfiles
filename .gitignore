@@ -9,6 +9,9 @@ home/.claude/*
 
 home/.gemini/
 
+home/.codex/*
+!home/.codex/AGENTS.md
+
 dot_config/git/config
 dot_config/git/config.local
 

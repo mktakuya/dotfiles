@@ -12,6 +12,10 @@ home/.gemini/
 home/.codex/*
 !home/.codex/AGENTS.md
 
+# ~/.codex がこのリポジトリへのシンボリックリンクのため、
+# Codex がチャットごとの作業ディレクトリをここに作ってしまう
+home/Documents/
+
 dot_config/opencode/*
 !dot_config/opencode/AGENTS.md
 

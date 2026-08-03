@@ -5,6 +5,7 @@ home/.claude/*
 !home/.claude/hooks
 !home/.claude/scripts
 !home/.claude/commands
+!home/.claude/output-styles
 !home/.claude/settings.json
 
 home/.gemini/

@@ -11,29 +11,44 @@ for src in "$PWD/home"/.*; do
   ln -nfs "$src" "$HOME/$base"
 done
 
-# ----- Gemini は使わなくなったので、過去に作ったリンクだけ削除
-if [ -L "$HOME/.gemini" ] && [ "$(readlink "$HOME/.gemini")" = "$PWD/home/.gemini" ]; then
-  rm "$HOME/.gemini"
-fi
-
 # ----- AGENTS.md
 ln -nfs "$PWD/home/AGENTS.md" "$HOME/AGENTS.md"
 
 # ----- Agent Skills
-mkdir -p ~/.claude/skills
-for skill in "$PWD/home/.agents/skills"/*/; do
-  name=$(basename "$skill")
-  [ "${name:0:1}" = "." ] && continue
-  [ -L ~/.claude/skills/"$name" ] && continue
-  ln -s "$skill" ~/.claude/skills/"$name"
+# Claude Code と Codex の双方から見える場所に撒く
+for skills_dir in "$HOME/.claude/skills" "$HOME/.codex/skills"; do
+  mkdir -p "$skills_dir"
+
+  for skill in "$PWD/home/.agents/skills"/*/; do
+    name=$(basename "$skill")
+    [ "${name:0:1}" = "." ] && continue
+
+    ln -nfs "${skill%/}" "$skills_dir/$name"
+  done
+
+  # リポジトリから消えたスキルへの壊れたリンクを掃除する
+  for link in "$skills_dir"/*; do
+    [ -L "$link" ] || continue
+    [ -e "$link" ] || rm "$link"
+  done
 done
 
 # ----- $HOME/.config
 mkdir -p "$HOME/.config"
 for dir in "$PWD/dot_config"/*; do
   name=$(basename "$dir")
+  target="$HOME/.config/$name"
 
-  ln -nfs "$dir" "$HOME/.config/$name"
+  if [ -d "$target" ] && [ ! -L "$target" ]; then
+    # ツール自身が実体のディレクトリを作っている場合（opencode の
+    # node_modules など）は、ディレクトリごと張るとリンクが中に
+    # ネストしてしまうため、中身を個別に張る
+    for entry in "$dir"/*; do
+      ln -nfs "${entry%/}" "$target/$(basename "$entry")"
+    done
+  else
+    ln -nfs "$dir" "$target"
+  fi
 
   # git/config は OS 別に切り替え
   if [ "$name" = "git" ]; then

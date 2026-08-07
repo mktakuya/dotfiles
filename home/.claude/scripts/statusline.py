@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Pattern 4: Fine-grained progress bar with true color gradient"""
+"""Claude Code のステータスライン。
+
+標準入力で渡されるセッション情報から、モデル名・コンテキスト使用率・
+レート制限の使用率（5 時間 / 7 日間）を取り出し、1 行に整形して出力する。
+
+使用率は 24bit カラーのグラデーション付きプログレスバーで表示する。
+バーは 1/8 文字単位で描画するため、幅 10 文字でも 1% 前後の変化が見える。
+値が取得できない項目は表示しない。
+"""
 import json, sys
 if sys.platform == 'win32':
     sys.stdout.reconfigure(encoding='utf-8')

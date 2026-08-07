@@ -1,14 +1,18 @@
 home/.agents/skills/.system/
 
+# ~/.claude はこのリポジトリへのシンボリックリンクであり、履歴・キャッシュ・
+# プラグインなどの実行時生成物もここに作られる。そのため一旦すべて無視し、
+# 管理したいものだけを明示的に復活させる。
+# Claude Code に新しい設定ディレクトリを追加したときは、ここへの追記も必要。
 home/.claude/*
 !home/.claude/CLAUDE.md
 !home/.claude/hooks
 !home/.claude/scripts
 !home/.claude/commands
+!home/.claude/agents
+!home/.claude/rules
 !home/.claude/output-styles
 !home/.claude/settings.json
-
-home/.gemini/
 
 home/.codex/*
 !home/.codex/AGENTS.md

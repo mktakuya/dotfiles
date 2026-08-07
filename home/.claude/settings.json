@@ -2,6 +2,21 @@
   "permissions": {
     "allow": [
       "Bash(echo *)"
+    ],
+    "deny": [
+      "Read(**/.env)",
+      "Read(**/.env.local)",
+      "Read(**/.env.*.local)",
+      "Read(**/*.pem)",
+      "Read(**/id_rsa)",
+      "Read(**/master.key)",
+      "Read(**/credentials/*.key)",
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/credentials)",
+      "Read(~/.claude.json)",
+      "Read(**/.codex/auth.json)",
+      "Bash(sudo rm:*)",
+      "Bash(git push --force:*)"
     ]
   },
   "outputStyle": "MISAKA",
@@ -12,7 +27,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$HOME\"/.claude/hooks/notify-waiting.sh"
+            "command": "bash \"$HOME\"/.claude/hooks/notify.sh \"で入力待ち状態です\""
           }
         ]
       }
@@ -35,7 +50,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$HOME\"/.claude/hooks/notify-complete.sh"
+            "command": "bash \"$HOME\"/.claude/hooks/notify.sh \"の処理が完了しました\""
           }
         ]
       }

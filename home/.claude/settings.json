@@ -12,7 +12,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$HOME\"/.claude/hooks/notify-waiting.sh"
+            "command": "bash \"$HOME\"/.claude/hooks/notify.sh \"で入力待ち状態です\""
           }
         ]
       }
@@ -35,7 +35,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"$HOME\"/.claude/hooks/notify-complete.sh"
+            "command": "bash \"$HOME\"/.claude/hooks/notify.sh \"の処理が完了しました\""
           }
         ]
       }

@@ -21,4 +21,5 @@ mktakuya の個人 dotfiles リポジトリ。`setup.sh` を実行すること�
 - `dot_config/git/config` は `setup.sh` が作るシンボリックリンクで、直接編集しない。OS に応じて `config.macos` または `config.other` を編集する
 - `home/.claude/` は Claude Code のグローバル設定領域であり、プロジェクト横断の設定・フック・出力スタイルが含まれる
 - `home/AGENTS.md` は毎セッション全文がコンテキストに載る。常に守るべきルールだけを置き、手順書やリファレンスは `home/.agents/skills/` の Skill に切り出す
+- `home/.codex/AGENTS.md` は Codex 専用のグローバル指示で、共通ガイドラインは含まない（冒頭で `~/AGENTS.md` を読ませている）。Codex Desktop のパーソナライズ設定の書き込み先もここになるため、`home/AGENTS.md` へのシンボリックリンクにはしない
 - `home/.claude/` と `home/.codex/` は実行時生成物（履歴・キャッシュ・sqlite）も含むため `.gitignore` で全体を無視し、管理対象だけを `!` で復活させている。新しい設定ディレクトリを追加したときは `.gitignore` への追記を忘れないこと

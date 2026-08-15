@@ -20,7 +20,6 @@
     ]
   },
   "outputStyle": "MISAKA",
-  "model": "opus[1m]",
   "hooks": {
     "Notification": [
       {

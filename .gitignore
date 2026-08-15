@@ -27,4 +27,7 @@ dot_config/opencode/*
 dot_config/git/config
 dot_config/git/config.local
 
+dot_config/routatic-proxy/*
+!dot_config/routatic-proxy/config.json
+
 home/.zshrc.d/*.local.zsh

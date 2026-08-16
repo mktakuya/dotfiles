@@ -19,7 +19,6 @@
       "Bash(git push --force:*)"
     ]
   },
-  "outputStyle": "MISAKA",
   "hooks": {
     "Notification": [
       {
@@ -74,7 +73,9 @@
       }
     }
   },
+  "outputStyle": "MISAKA",
   "spinnerTipsEnabled": false,
   "alwaysThinkingEnabled": true,
-  "effortLevel": "high"
+  "effortLevel": "high",
+  "theme": "dark"
 }

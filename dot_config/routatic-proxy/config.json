@@ -25,7 +25,7 @@
     "long_context": {
       "provider": "opencode-go",
       "model_id": "kimi-k3",
-      "temperature": 0.7,
+      "temperature": 1,
       "max_tokens": 16384,
       "context_threshold": 80000
     },
@@ -57,7 +57,7 @@
     "kimi-k3": {
       "provider": "opencode-go",
       "model_id": "kimi-k3",
-      "temperature": 0.7,
+      "temperature": 1,
       "max_tokens": 32768,
       "vision": true
     },
@@ -164,7 +164,7 @@
   "model_family_overrides": {
     "opus": {
       "provider": "opencode-go",
-      "model_id": "kimi-k3",
+      "model_id": "glm-5.3",
       "temperature": 0.7,
       "max_tokens": 8192,
       "vision": true

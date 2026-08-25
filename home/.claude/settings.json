@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(echo *)"
+      "Bash(echo *)",
+      "Bash(gh stack *)"
     ],
     "deny": [
       "Read(**/.env)",

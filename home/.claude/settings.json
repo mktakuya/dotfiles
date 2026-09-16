@@ -64,7 +64,8 @@
     "ruby-lsp@claude-plugins-official": true,
     "portal@smarthr-claude-plugins": true,
     "figma@claude-plugins-official": true,
-    "coderabbit@claude-plugins-official": true
+    "coderabbit@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "smarthr-claude-plugins": {

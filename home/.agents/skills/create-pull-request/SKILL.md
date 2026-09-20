@@ -1,6 +1,6 @@
 ---
 name: create-pull-request
-description: Pull Request を作成・更新するときに使う。gh コマンドでのドラフト作成手順、PR テンプレートの探索、レビュアーの扱い。
+description: Pull Request を作成・更新するときに使う。gh コマンドでの作成手順、PR テンプレートの探索、アサイン者とレビュアーの扱い。
 ---
 
 # Pull Request の作成
@@ -18,13 +18,19 @@ ls .github/PULL_REQUEST_TEMPLATE.md .github/pull_request_template.md \
 
 テンプレートが見つからない場合のみ、変更内容に応じた本文を自分で構成する。
 
-### 2. ドラフトで作成する
+### 2. 作成する
 
 ```bash
-gh pr create --draft --title "<件名>" --body-file <本文ファイル>
+# 個人開発プロジェクト（mktakuya/ 配下）の場合
+gh pr create --assignee "@me" --title "<件名>" --body-file <本文ファイル>
+
+# それ以外のリポジトリの場合
+gh pr create --draft --assignee "@me" --title "<件名>" --body-file <本文ファイル>
 ```
 
-- **必ず `--draft` を付ける**。レビュー可能な状態にするかどうかはユーザーが判断する
+- 必ず `--assignee "@me"` を付けて自分をアサイン者にする
+- `mktakuya/` 配下の個人開発プロジェクトでは `--draft` を付けず、オープンな Pull Request を作成する
+- それ以外のリポジトリでは必ず `--draft` を付ける
 - 件名はコミットメッセージと同じ規約に従う（`/git-commit-convention` 参照）
 - 本文が複数行になるときは、ファイルに書いて `--body-file` で渡す
 

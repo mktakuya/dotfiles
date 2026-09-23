@@ -1,7 +1,7 @@
 [user]
   name = Takuya Mukohira
   email = takuya.mk96@gmail.com
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIxWKB2MCxGSBSaTuXm4szFrbn4MpyPQJHH/tUD16stJ
+  signingkey = ~/.ssh/signing_ed25519
 
 [alias]
   st = status -sbu
@@ -38,7 +38,8 @@
   format = ssh
 
 [gpg "ssh"]
-  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+  # 署名時は SSH agent を使わず、ローカルの秘密鍵を直接読み込む
+  program = ~/.config/git/ssh-sign
 
 [commit]
   gpgsign = true

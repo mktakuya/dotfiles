@@ -9,10 +9,6 @@ if [[ -d $HOME/.rbenv ]]; then
   FPATH="$HOME/.rbenv/completions:$FPATH"
 fi
 
-if [[ -d $HOME/.nodenv ]]; then
-  FPATH="$HOME/.nodenv/completions:$FPATH"
-fi
-
 if [[ -d $HOME/.pyenv ]]; then
   FPATH="$HOME/.pyenv/completions:$FPATH"
 fi

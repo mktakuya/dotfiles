@@ -2,3 +2,6 @@
 # rbenv / nodenv / pyenv から 1 ツールずつ移すため、移行済みのツールだけ
 # .ruby-version などのバージョンファイルを読ませる
 idiomatic_version_file_enable_tools = ["node"]
+
+[tools]
+node = "24.11.1"

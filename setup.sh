@@ -61,6 +61,12 @@ for dir in "$PWD/dot_config"/*; do
   fi
 done
 
+# ----- mise
+# 公式インストーラで ~/.local/bin/mise に入れる。更新は mise self-update で行う
+if ! command -v mise > /dev/null 2>&1 && [ ! -x "$HOME/.local/bin/mise" ]; then
+  curl -fsSL https://mise.run | sh
+fi
+
 # ----- Bundler
 if command -v bundle > /dev/null 2>&1; then
   bundle config set --global default_cli_command install

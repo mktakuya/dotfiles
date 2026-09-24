@@ -6,3 +6,4 @@ idiomatic_version_file_enable_tools = ["node"]
 [tools]
 "github:googleworkspace/cli" = "0.3.4"
 node = "24.11.1"
+pnpm = "10.33.1"

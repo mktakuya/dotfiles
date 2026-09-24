@@ -5,10 +5,6 @@ case $OSTYPE in
     ;;
 esac
 
-if [[ -d $HOME/.rbenv ]]; then
-  FPATH="$HOME/.rbenv/completions:$FPATH"
-fi
-
 if [[ -d $HOME/.pyenv ]]; then
   FPATH="$HOME/.pyenv/completions:$FPATH"
 fi

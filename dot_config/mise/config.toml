@@ -1,9 +1,13 @@
 [settings]
 # rbenv / nodenv / pyenv から 1 ツールずつ移すため、移行済みのツールだけ
 # .ruby-version などのバージョンファイルを読ませる
-idiomatic_version_file_enable_tools = ["node"]
+idiomatic_version_file_enable_tools = ["node", "ruby"]
+# ビルド済み Ruby は macOS 標準の証明書しか見ず、Cloudflare Gateway 配下で HTTPS が通らない。
+# rbenv と同じく ruby-build でビルドし、Homebrew の OpenSSL と証明書を使わせる
+ruby.compile = true
 
 [tools]
 "github:googleworkspace/cli" = "0.3.4"
 node = "24.11.1"
 pnpm = "10.33.1"
+ruby = "3.2.7"

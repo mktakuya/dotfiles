@@ -116,7 +116,7 @@ _cache_completion() {
 ZSH_COMPLETION_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh-completions"
 [[ -d "$ZSH_COMPLETION_CACHE_DIR" ]] || mkdir -p "$ZSH_COMPLETION_CACHE_DIR"
 
-for cmd in colima npm pnpm routatic-proxy; do
+for cmd in colima mise npm pnpm routatic-proxy; do
   if type "$cmd" > /dev/null 2>&1; then
     _cache_completion "$cmd"
   fi

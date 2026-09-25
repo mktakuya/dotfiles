@@ -13,6 +13,9 @@ mktakuya の個人 dotfiles リポジトリ。`setup.sh` を実行すること�
 - `home/.agents/skills/` 以下の各スキルディレクトリを `~/.claude/skills/` と `~/.codex/skills/` の両方にシンボリックリンクで展開する。リポジトリから消えたスキルへの壊れたリンクは掃除される
 - `dot_config/` 以下の各ディレクトリを `$HOME/.config/` にシンボリックリンクで展開する
 - Git 設定は OS を判定し、macOS なら `config.macos`、それ以外なら `config.other` を `config` として使う
+- mise が無ければ公式インストーラで `~/.local/bin/mise` に入れる。更新は `mise self-update` で行う
+- Node・Ruby・Python などのランタイムと global ツールは `dot_config/mise/config.toml`（`~/.config/mise` へのシンボリックリンク）で管理する
+- Ruby を入れるたびに入る gem は `home/.default-gems` で指定する
 
 ## 注意事項
 

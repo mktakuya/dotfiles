@@ -14,6 +14,9 @@ mktakuya の個人 dotfiles リポジトリ。`setup.sh` を実行すること�
 - `dot_config/` 以下の各ディレクトリを `$HOME/.config/` にシンボリックリンクで展開する
 - `dot_ssh/` を `$HOME/.ssh` にシンボリックリンクで展開する
 - Git 設定は OS を判定し、macOS なら `config.macos`、それ以外なら `config.other` を `config` として使う
+- mise が無ければ公式インストーラで `~/.local/bin/mise` に入れる。更新は `mise self-update` で行う
+- Node・Ruby・Python などのランタイムと global ツールは `dot_config/mise/config.toml`（`~/.config/mise` へのシンボリックリンク）で管理する
+- Ruby を入れるたびに入る gem は `home/.default-gems` で指定する
 
 ## 注意事項
 

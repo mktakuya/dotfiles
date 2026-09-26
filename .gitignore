@@ -32,5 +32,9 @@ dot_config/routatic-proxy/*
 
 home/.zshrc.d/*.local.zsh
 
-# ~/.ssh/config.local は機密ホスト設定（git 管理外の実体）
-dot_ssh/config.local
+# ~/.ssh はこのリポジトリへのシンボリックリンクで、秘密鍵・known_hosts などの
+# 機密ファイルもここに置かれる。そのため一旦すべて無視し、管理したいものだけを
+# 明示的に復活させる。dot_ssh/ にファイルを追加したときは、管理したいものが
+# あればここへの追記も必要。
+dot_ssh/*
+!dot_ssh/config

@@ -62,12 +62,14 @@ for dir in "$PWD/dot_config"/*; do
 done
 
 # ----- $HOME/.ssh
-# ~/.ssh ディレクトリ自体は鍵・known_hosts などの実体を置くため実ディレクトリの
-# ままにし、config のみ共通部分（dot_ssh/config）をリンクする。
-# 機密ホストは ~/.ssh/config.local（git 管理外）に置き、config から Include する。
-mkdir -p "$HOME/.ssh"
-chmod 700 "$HOME/.ssh"
-ln -nfs "$PWD/dot_ssh/config" "$HOME/.ssh/config"
+# dot_ssh を ~/.ssh の実体としてリンクする。鍵・known_hosts・config.local などは
+# dot_ssh 内に実体として置かれ、.gitignore のホワイトリストで管理対象を選別する。
+chmod 700 "$PWD/dot_ssh"
+if [ -e "$HOME/.ssh" ] && [ ! -L "$HOME/.ssh" ]; then
+  echo "エラー: ~/.ssh が実ディレクトリです。中身を dot_ssh/ に移して rmdir してから再実行してください" >&2
+else
+  ln -nfs "$PWD/dot_ssh" "$HOME/.ssh"
+fi
 
 # ----- Bundler
 if command -v bundle > /dev/null 2>&1; then

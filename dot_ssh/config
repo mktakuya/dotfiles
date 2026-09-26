@@ -1,0 +1,14 @@
+Include config.local
+
+Include /Users/mktakuya/.colima/ssh_config
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentitiesOnly yes
+
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"

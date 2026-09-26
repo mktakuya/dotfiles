@@ -12,6 +12,7 @@ mktakuya の個人 dotfiles リポジトリ。`setup.sh` を実行すること�
 - `home/AGENTS.md` を `$HOME/AGENTS.md` にシンボリックリンクで展開する
 - `home/.agents/skills/` 以下の各スキルディレクトリを `~/.claude/skills/` と `~/.codex/skills/` の両方にシンボリックリンクで展開する。リポジトリから消えたスキルへの壊れたリンクは掃除される
 - `dot_config/` 以下の各ディレクトリを `$HOME/.config/` にシンボリックリンクで展開する
+- `dot_ssh/config` を `$HOME/.ssh/config` にシンボリックリンクで展開する。機密ホストは `~/.ssh/config.local`（git 管理外）に置き、config から `Include config.local` で読み込む
 - Git 設定は OS を判定し、macOS なら `config.macos`、それ以外なら `config.other` を `config` として使う
 
 ## 注意事項
@@ -19,6 +20,7 @@ mktakuya の個人 dotfiles リポジトリ。`setup.sh` を実行すること�
 - このリポジトリは個人 PC・会社貸与 PC で共通利用しているため、個人情報・会社固有の情報（社内ホスト名、社内トークン、Jira プロジェクトキー、プロダクトのコードネーム、業務固有のエイリアスなど）をコミットしない
 - `home/` 以下のファイルを直接編集すると、シンボリックリンク経由でホームディレクトリの設定も変更される
 - `dot_config/git/config` は `setup.sh` が作るシンボリックリンクで、直接編集しない。OS に応じて `config.macos` または `config.other` を編集する
+- `~/.ssh/config` は `setup.sh` が作るシンボリックリンクで、直接編集しない。共通設定は `dot_ssh/config` を編集し、機密ホスト（自宅 Lab・会社など）は `~/.ssh/config.local` に書く
 - `home/.claude/` は Claude Code のグローバル設定領域であり、プロジェクト横断の設定・フック・出力スタイルが含まれる
 - `home/AGENTS.md` は毎セッション全文がコンテキストに載る。常に守るべきルールだけを置き、手順書やリファレンスは `home/.agents/skills/` の Skill に切り出す
 - `home/.codex/AGENTS.md` は Codex 専用のグローバル指示で、共通ガイドラインは含まない（冒頭で `~/AGENTS.md` を読ませている）。Codex Desktop のパーソナライズ設定の書き込み先もここになるため、`home/AGENTS.md` へのシンボリックリンクにはしない

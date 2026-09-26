@@ -31,3 +31,6 @@ dot_config/routatic-proxy/*
 !dot_config/routatic-proxy/config.json
 
 home/.zshrc.d/*.local.zsh
+
+# ~/.ssh/config.local は機密ホスト設定（git 管理外の実体）
+dot_ssh/config.local

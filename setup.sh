@@ -61,6 +61,14 @@ for dir in "$PWD/dot_config"/*; do
   fi
 done
 
+# ----- $HOME/.ssh
+# ~/.ssh ディレクトリ自体は鍵・known_hosts などの実体を置くため実ディレクトリの
+# ままにし、config のみ共通部分（dot_ssh/config）をリンクする。
+# 機密ホストは ~/.ssh/config.local（git 管理外）に置き、config から Include する。
+mkdir -p "$HOME/.ssh"
+chmod 700 "$HOME/.ssh"
+ln -nfs "$PWD/dot_ssh/config" "$HOME/.ssh/config"
+
 # ----- Bundler
 if command -v bundle > /dev/null 2>&1; then
   bundle config set --global default_cli_command install

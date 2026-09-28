@@ -6,7 +6,10 @@ mktakuya の個人 dotfiles リポジトリ。`setup.sh` を実行すること�
 
 ```bash
 ./setup.sh
+mise install
 ```
+
+`mise install` は `dot_config/mise/config.toml` のランタイムと global ツールを入れる。Ruby と Python はソースからビルドするため時間がかかるので、`setup.sh` には含めていない。
 
 - `home/` 以下の隠しファイルを `$HOME/` にシンボリックリンクで展開する
 - `home/AGENTS.md` を `$HOME/AGENTS.md` にシンボリックリンクで展開する

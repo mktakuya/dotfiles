@@ -1,0 +1,2 @@
+# 依存パッケージの install スクリプト経由で任意コードが実行されるのを防ぐ
+export NPM_CONFIG_IGNORE_SCRIPTS=true

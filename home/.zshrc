@@ -63,10 +63,6 @@ if type "go" > /dev/null 2>&1; then
   export PATH=$PATH:$GOBIN
 fi
 
-if [[ -d $HOME/.pyenv ]]; then
-  export PATH="$PATH:$HOME/.pyenv/bin"
-fi
-
 
 # ----- 関数を定義する
 function peco-src() {
@@ -120,7 +116,7 @@ _cache_completion() {
 ZSH_COMPLETION_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh-completions"
 [[ -d "$ZSH_COMPLETION_CACHE_DIR" ]] || mkdir -p "$ZSH_COMPLETION_CACHE_DIR"
 
-for cmd in colima npm pnpm routatic-proxy; do
+for cmd in colima mise npm pnpm routatic-proxy; do
   if type "$cmd" > /dev/null 2>&1; then
     _cache_completion "$cmd"
   fi

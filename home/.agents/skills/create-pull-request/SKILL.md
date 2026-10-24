@@ -9,14 +9,17 @@ description: Pull Request を作成・更新するときに使う。gh コマン
 
 ### 1. PR テンプレートを探す
 
-必ずリポジトリの Pull Request テンプレートを探し、あれば本文の骨格として利用する。
+必ずリポジトリの Pull Request テンプレートを探す。リポジトリルートで、追跡ファイルのパス全体を検索し、テンプレートディレクトリ内のファイルも列挙する。
 
 ```bash
-ls .github/PULL_REQUEST_TEMPLATE.md .github/pull_request_template.md \
-   .github/PULL_REQUEST_TEMPLATE/ docs/PULL_REQUEST_TEMPLATE.md 2>/dev/null
+git ls-files | rg -i '(^|/)(pull_request_template\.md$|pull_request_template/)'
 ```
 
-テンプレートが見つからない場合のみ、変更内容に応じた本文を自分で構成する。
+- ファイル名だけを `*TEMPLATE*` で絞ると、`PULL_REQUEST_TEMPLATE/default.md` などを見落とすため、その検索だけで「テンプレートなし」と判断しない。
+- 候補があれば、用途に合うテンプレートの内容を読み、本文の骨格にする。複数ある場合は PR の内容に合うものを選ぶ。
+- テンプレートの見出しと順序を維持し、該当事項がない節もテンプレートの指定に従って記入する。
+- 検索エラーや取得失敗を「テンプレートなし」と扱わない。ローカルで確認できない場合は `gh api` でベースブランチのツリーとテンプレートを確認する。
+- テンプレートが見つからないことを確認した場合のみ、変更内容に応じた本文を自分で構成する。
 
 ### 2. 作成する
 
@@ -34,7 +37,11 @@ gh pr create --draft --assignee "@me" --title "<件名>" --body-file <本文フ�
 - 件名はコミットメッセージと同じ規約に従う（`/git-commit-convention` 参照）
 - 本文が複数行になるときは、ファイルに書いて `--body-file` で渡す
 
-### 3. レビュアー
+### 3. 作成・更新後の本文を確認する
+
+`gh pr view <PR 番号> --json body --jq .body` で保存された本文を再取得する。使用したテンプレートと見出し・順序を照合し、記入漏れや説明と差分の不一致がないことを確認する。不一致があれば修正し、再取得して確認する。
+
+### 4. レビュアー
 
 - レビュアーは自動でアサインしない
 - ユーザーが明示的に指示した場合のみ `--reviewer` を付ける

@@ -1,6 +1,4 @@
 [settings]
-# rbenv / nodenv / pyenv のときと同じく、プロジェクトの .node-version・.ruby-version・.python-version で
-# バージョンを切り替えられるようにする
 idiomatic_version_file_enable_tools = ["node", "python", "ruby"]
 # ビルド済みの Ruby・Python は macOS 標準の証明書しか見ず、Cloudflare Gateway 配下で HTTPS が通らない。
 # rbenv・pyenv と同じく ruby-build・python-build でビルドし、Homebrew の OpenSSL と証明書を使わせる
@@ -10,6 +8,6 @@ python.compile = true
 [tools]
 "github:googleworkspace/cli" = "0.3.4"
 node = "24.11.1"
-pnpm = "10.33.1"
+pnpm = "12.8.1"
 python = "3.14.7"
 ruby = "4.0.9"
